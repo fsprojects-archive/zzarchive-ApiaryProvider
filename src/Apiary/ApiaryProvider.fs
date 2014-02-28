@@ -1,4 +1,4 @@
-﻿namespace ProviderImplementation
+﻿namespace ApiaryProvider.ProviderImplementation
 
 open System
 open System.IO
@@ -7,16 +7,17 @@ open System.Reflection
 open System.Globalization
 open Microsoft.FSharp.Core.CompilerServices
 open Microsoft.FSharp.Quotations
-open FSharp.Data.Runtime
+open ApiaryProvider.Runtime
+open ProviderImplementation
 open ProviderImplementation.ProvidedTypes
 
 [<TypeProvider>]
 type public ApiaryProvider(cfg:TypeProviderConfig) as this =
   inherit TypeProviderForNamespaces()
 
-  // Generate namespace and type 'FSharp.Apiary.ApiaryProvider'
+  // Generate namespace and type 'ApiaryProvider.ApiaryProvider'
   let asm, _, replacer = AssemblyResolver.init cfg
-  let ns = "FSharp.Data"
+  let ns = "ApiaryProvider"
   let apiaryProvTy = ProvidedTypeDefinition(asm, ns, "ApiaryProvider", Some(typeof<obj>))
 
   let buildTypes (typeName:string) (args:obj[]) =

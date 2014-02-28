@@ -4,25 +4,25 @@
 // --------------------------------------------------------------------------------------
 
 // Binaries that have XML documentation (in a corresponding generated XML file)
-let referenceBinaries = [ "FSharp.Data.dll"(*; "FSharp.Data.Experimental.dll"*) ]
+let referenceBinaries = [ "ApiaryProvider.dll"; "FSharp.Data.dll" ]
 // Web site location for the generated documentation
-let repo = "https://github.com/fsharp/FSharp.Data/tree/master/"
-let website = "/FSharp.Data"
+let repo = "https://github.com/fsprojects/ApiaryProvider/tree/master/"
+let website = "/ApiaryProvider"
 
 // Specify more information about your project
 let info =
-  [ "project-name", "F# Data"
+  [ "project-name", "Apiary Provider"
     "project-author", "Tomas Petricek; Gustavo Guerra"
-    "project-summary", "The F# Data library implements type providers for working with structured file formats (CSV, JSON and XML) and for accessing the WorldBank and Freebase data. It also includes helpers for other data-related tasks."
-    "project-github", "http://github.com/fsharp/FSharp.Data"
-    "project-nuget", "https://nuget.org/packages/FSharp.Data" ]
+    "project-summary", "Type provider for Apiary.io"
+    "project-github", "http://github.com/fsprojects/ApiaryProvider"
+    "project-nuget", "https://nuget.org/packages/ApiaryProvider" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below
 // --------------------------------------------------------------------------------------
 
-#I "../../packages/FSharp.Compiler.Service.0.0.20/lib/net40"
-#I "../../packages/FSharp.Formatting.2.3.10-beta/lib/net40"
+#I "../../packages/FSharp.Compiler.Service.0.0.44/lib/net40"
+#I "../../packages/FSharp.Formatting.2.4.4/lib/net40"
 #I "../../packages/RazorEngine.3.3.0/lib/net40/"
 #r "../../packages/Microsoft.AspNet.Razor.2.0.30506.0/lib/net40/System.Web.Razor.dll"
 #r "../../packages/FAKE/tools/FakeLib.dll"
@@ -49,9 +49,8 @@ let bin        = __SOURCE_DIRECTORY__ @@ "../../bin"
 let content    = __SOURCE_DIRECTORY__ @@ "../content"
 let output     = __SOURCE_DIRECTORY__ @@ "../output"
 let files      = __SOURCE_DIRECTORY__ @@ "../files"
-let data       = __SOURCE_DIRECTORY__ @@ "../content/data"
 let templates  = __SOURCE_DIRECTORY__ @@ "templates"
-let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/FSharp.Formatting.2.3.10-beta/"
+let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/FSharp.Formatting.2.4.4/"
 let docTemplate = formatting @@ "templates/docpage.cshtml"
 
 // Where to look for *.cshtml templates (in this order)
@@ -62,8 +61,6 @@ let layoutRoots =
 
 // Copy static files and CSS + JS from F# Formatting
 let copyFiles () =
-  ensureDirectory (output @@ "data")
-  CopyRecursive data (output @@ "data") true |> Log "Copying data files: "
   CopyRecursive files output true |> Log "Copying file: "
   ensureDirectory (output @@ "content")
   CopyRecursive (formatting @@ "styles") (output @@ "content") true 

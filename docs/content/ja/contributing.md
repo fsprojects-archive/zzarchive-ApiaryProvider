@@ -1,22 +1,22 @@
-F# Data に貢献する
+Apiary Provider に貢献する
 ==================
 
-このページには、F# Dataパッケージに貢献しようとするあなたにとって必要な
+このページには、Apiary Providerパッケージに貢献しようとするあなたにとって必要な
 基本的な情報が揃えられています。
 たとえばライブラリの構造に関する簡単な説明や、型プロバイダの作成方法、
-F# Dataにおける複数のターゲットに対する処理方法
+Apiary Providerにおける複数のターゲットに対する処理方法
 (デスクトップやSilverlight、ポータブルライブラリで型プロバイダを
 利用できるようにする方法)があります。
 
- * このページはGitHub上のF# Dataプロジェクトに対して
+ * このページはGitHub上のApiary Providerプロジェクトに対して
    pullリクエストを送信することで編集できます。
-   そのため、F# Dataで遊んでいる間に何かしら学んだことがあれば、是非それを
-   [こちら](https://github.com/fsharp/FSharp.Data/blob/master/docs/content/ja/contributing.md)
+   そのため、Apiary Providerで遊んでいる間に何かしら学んだことがあれば、是非それを
+   [こちら](https://github.com/fsprojects/ApiaryProvider/blob/master/docs/content/ja/contributing.md)
    に記録として残してください!
 
  * 機能(あるいはすばらしいアイディア！)に関する議論、
    あるいは貢献方法に関する提案がある場合には、GitHub上の
-   [Issue list](https://github.com/fsharp/FSharp.Data/issues) をチェックするか、
+   [Issue list](https://github.com/fsprojects/ApiaryProvider/issues) をチェックするか、
    [F# オープンソースメーリングリスト](http://groups.google.com/group/fsharp-opensource)
    宛にメールをください。
 
@@ -25,17 +25,13 @@ F# Dataにおける複数のターゲットに対する処理方法
 ルートディレクトリには複数のVisual Studioソリューションファイル
 (`*.sln`)があり、それぞれ論理的なグループ毎に分けられています。
 
- * **FSharp.Data.sln** にはF# Dataの機能
+ * **ApiaryProvider.sln** にはApiary Providerの機能
    (たとえば実行時あるいはデザイン時の型プロバイダライブラリ)を
    実装する主要なプロジェクトが含まれています。
    未完成だけれども興味深いコードを追加したい場合には試験的プロジェクトの方に
    追加するようにしてください。
 
- * **FSharp.Data.ExtraPlatforms.sln** には `FSharp.Data.sln` と同じプロジェクトが
-   含まれていますが、対象となるプラットフォームとして
-   Silverlightやポータブルクラスライブラリなどが追加されています。
-
- * **FSharp.Data.Tests.sln** にはF# Dataをテストするためのライブラリがあります。
+ * **ApiaryProvider.Tests.sln** にはApiary Providerをテストするためのライブラリがあります。
    また、Webサイト用のファイル ( `*.fsx` および `*.md`) も含まれています。
    ドキュメントを編集したい場合はこのソリューションをチェックしてください！
 
@@ -48,7 +44,7 @@ F# Dataにおける複数のターゲットに対する処理方法
  * **実行時** コンポーネントは型プロバイダを使用するコンパイル済みのF#コードを
    実行した時に実際に使用される型プロバイダの一部のことです。
    このアセンブリにはJSONやCSVパーサー、HTTPユーティリティなど、
-   FSharp.Dataの型プロバイダではないコンポーネントも含まれます。
+   ApiaryProviderの型プロバイダではないコンポーネントも含まれます。
 
  * **デザイン時** コンポーネントは型プロバイダを使用するF#コードを
    任意のエディタで記述している間、あるいはコードをコンパイルしている間に
@@ -74,15 +70,15 @@ F# Dataにおける複数のターゲットに対する処理方法
 試験的プロジェクトには2つの **実行時** コンポーネントと2つの **デザイン時**
 コンポーネントがあります。
 
-`FSharp.Data.sln` を開くと、以下のような **実行時コンポーネント** が
+`ApiaryProvider.sln` を開くと、以下のような **実行時コンポーネント** が
 含まれていることが確認できるでしょう：
 
- * **FSharp.Data** - デスクトップ.NET 4.0 バージョン
- * **FSharp.Data.Portable** - F# ポータブルライブラリバージョン
+ * **ApiaryProvider** - デスクトップ.NET 4.0 バージョン
+ * **ApiaryProvider.Portable** - F# ポータブルライブラリバージョン
    (デスクトップの.NET 4.0、Windows Phone 8、 Windows 8を対象とする)
- * **FSharp.Data.Silverlight** - Silverlight 5 バージョン
- * **FSharp.Data.Experimental** - 試験的機能向けのデスクトップ.NET 4.0 バージョン
- * **FSharp.Data.Experimental.Portable** - 試験的機能向けのF#
+ * **ApiaryProvider.Silverlight** - Silverlight 5 バージョン
+ * **ApiaryProvider** - 試験的機能向けのデスクトップ.NET 4.0 バージョン
+ * **ApiaryProvider.Portable** - 試験的機能向けのF#
    ポータブルライブラリバージョン
 
 ポータブルライブラリをSilverlight上で使用することは可能ですが、
@@ -94,10 +90,10 @@ XmlProviderもSilverlight上では機能しません。
 
 **デザイン時** コンポーネントとしては以下のプロジェクトがあります：
 
- * **FSharp.Data.DesignTime** - デスクトップエディタ用のメインバージョン
- * **FSharp.Data.DesignTime.Silverlight** - Try F#用のメインバージョン
- * **FSharp.Data.Experimental.DesignTime** - デスクトップエディタ用の試験的バージョン
- * **FSharp.Data.Experimental.DesignTime.Silverlight** - Try F#用の試験的バージョン
+ * **ApiaryProvider.DesignTime** - デスクトップエディタ用のメインバージョン
+ * **ApiaryProvider.DesignTime.Silverlight** - Try F#用のメインバージョン
+ * **ApiaryProvider.DesignTime** - デスクトップエディタ用の試験的バージョン
+ * **ApiaryProvider.DesignTime.Silverlight** - Try F#用の試験的バージョン
 
 Silverlight 5のプロジェクトをコンパイルするためには、
 [Silverlight 5.0 開発者用ランタイム](http://go.microsoft.com/fwlink/?LinkId=229324)
@@ -105,7 +101,7 @@ Silverlight 5のプロジェクトをコンパイルするためには、
 
 ### 型プロバイダの構成
 
-F# Dataの型プロバイダのうち、いくつかのものは同じような構造になっています。
+Apiary Providerの型プロバイダのうち、いくつかのものは同じような構造になっています。
 CSVやJSON、XMLプロバイダはいずれもサンプルとして入力されたファイル構造から
 型を構成します。
 さらに、いずれにも実行時コンポーネントがあります(CSVパーサーやJSONパーサー、
@@ -167,7 +163,7 @@ WorldBank、Freebase、Apiaryの型プロバイダの場合は異なります。
 Assemlby replacerはクォート式を変換して、正しいバージョンを参照するように
 コードを置き換えます。
 Assembly replacerの動作の詳細については
-[GitHub上での議論](https://github.com/fsharp/FSharp.Data/pull/5)
+[GitHub上での議論](https://github.com/fsprojects/ApiaryProvider/pull/5)
 を参照してください。
 
 `AssemblyReplacer` 型には以下のようなドキュメントがあります：
@@ -229,7 +225,7 @@ Assembly replacerの動作の詳細については
 
 ## ドキュメント
 
-F# Dataライブラリのドキュメントは
+Apiary Providerライブラリのドキュメントは
 [F# Formatting](https://github.com/tpetricek/FSharp.Formatting)
 を使用して自動生成されています。
 このライブラリを使用すると `*.md` (コードスニペットが埋め込まれた
@@ -237,17 +233,17 @@ F# Dataライブラリのドキュメントは
 F#スクリプトファイル) ファイルを素敵なHTMLドキュメントに変換してくれます。
 
  * すべてのドキュメントに関連するコードは
-   [GitHub上の](https://github.com/fsharp/FSharp.Data/tree/master/samples)
+   [GitHub上の](https://github.com/fsprojects/ApiaryProvider/tree/master/samples)
    `samples` ディレクトリにあります。
    バグや新機能を追加した場合には、必ずドキュメントが残るようにしてください！
 
  * <p>それぞれの型に直接関連したドキュメントだけでなく、
-   ([GitHub上の](https://github.com/fsharp/FSharp.Data/tree/master/samples/tutorials))
+   ([GitHub上の](https://github.com/fsprojects/ApiaryProvider/tree/master/samples/tutorials))
    `tutorials` フォルダにもドキュメントがあります。
-   ここにはF# Dataの機能を紹介するためのサンプルやチュートリアルを追加できます。
+   ここにはApiary Providerの機能を紹介するためのサンプルやチュートリアルを追加できます。
 
  * ドキュメントをビルドしたい場合には単に `build.fsx` スクリプト
-   ([GitHubへのリンク](https://github.com/fsharp/FSharp.Data/blob/master/tools/build.fsx))
+   ([GitHubへのリンク](https://github.com/fsprojects/ApiaryProvider/blob/master/tools/build.fsx))
    を実行するだけでビルドできます。
 
 ## 関連する記事

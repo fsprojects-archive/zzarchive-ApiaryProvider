@@ -1,144 +1,28 @@
-﻿namespace ProviderImplementation
+﻿namespace ApiaryProvider.ProviderImplementation
 
 open System
 open System.IO
 open ProviderImplementation
 open ProviderImplementation.ProvidedTypes
-open FSharp.Data.Runtime
-open FSharp.Data.Runtime.Freebase.FreebaseRequests
 
-type CsvProviderArgs = 
-    { Sample : string
-      Separator : string
-      Culture : string
-      InferRows : int
-      Schema : string
-      HasHeaders : bool
-      IgnoreErrors : bool
-      AssumeMissingValues : bool
-      PreferOptionals : bool
-      Quote : char
-      MissingValues : string
-      CacheRows : bool
-      ResolutionFolder : string }
-
-type XmlProviderArgs = 
-    { Sample : string
-      SampleIsList : bool
-      Global : bool
-      Culture : string
-      ResolutionFolder : string }
-
-type JsonProviderArgs = 
-    { Sample : string
-      SampleIsList : bool
-      RootName : string
-      Culture : string
-      ResolutionFolder : string }
-
-type WorldBankProviderArgs =
-    { Sources : string
-      Asynchronous : bool }
-
-type FreebaseProviderArgs =
-    { Key : string
-      ServiceUrl : string
-      NumIndividuals : int
-      UseUnitsOfMeasure : bool 
-      Pluralize : bool 
-      SnapshotDate : string
-      LocalCache : bool
-      AllowLocalQueryEvaluation : bool
-      UseRefinedTypes: bool }
+type ApiaryProviderArgs = 
+    { ApiName : string }
 
 type TypeProviderInstantiation = 
-    | Csv of CsvProviderArgs
-    | Xml of XmlProviderArgs
-    | Json of JsonProviderArgs
-    | WorldBank of WorldBankProviderArgs
-    | Freebase of FreebaseProviderArgs
+    | Apiary of ApiaryProviderArgs
 
     member x.GenerateType resolutionFolder runtimeAssembly =
         let f, args =
             match x with
-            | Csv x -> 
-                (fun cfg -> new CsvProvider(cfg) :> TypeProviderForNamespaces),
-                [| box x.Sample
-                   box x.Separator
-                   box x.Culture
-                   box x.InferRows
-                   box x.Schema
-                   box x.HasHeaders
-                   box x.IgnoreErrors
-                   box x.AssumeMissingValues
-                   box x.PreferOptionals
-                   box x.Quote
-                   box x.MissingValues
-                   box x.CacheRows
-                   box x.ResolutionFolder |] 
-            | Xml x ->
-                (fun cfg -> new XmlProvider(cfg) :> TypeProviderForNamespaces),
-                [| box x.Sample
-                   box x.SampleIsList
-                   box x.Global
-                   box x.Culture
-                   box x.ResolutionFolder |] 
-            | Json x -> 
-                (fun cfg -> new JsonProvider(cfg) :> TypeProviderForNamespaces),
-                [| box x.Sample
-                   box x.SampleIsList
-                   box x.RootName
-                   box x.Culture
-                   box x.ResolutionFolder|] 
-            | WorldBank x ->
-                (fun cfg -> new WorldBankProvider(cfg) :> TypeProviderForNamespaces),
-                [| box x.Sources
-                   box x.Asynchronous |] 
-            | Freebase x ->
-                (fun cfg -> new FreebaseTypeProvider(cfg) :> TypeProviderForNamespaces),
-                [| box x.Key
-                   box x.ServiceUrl
-                   box x.NumIndividuals
-                   box x.UseUnitsOfMeasure 
-                   box x.Pluralize
-                   box x.SnapshotDate
-                   box x.LocalCache
-                   box x.AllowLocalQueryEvaluation 
-                   box x.UseRefinedTypes |]
+            | Apiary x ->
+                (fun cfg -> new ApiaryProvider(cfg) :> TypeProviderForNamespaces),
+                [| box x.ApiName |] 
         Debug.generate resolutionFolder runtimeAssembly f args
 
     override x.ToString() =
         match x with
-        | Csv x -> 
-            ["Csv"
-             x.Sample
-             x.Separator
-             x.Culture
-             x.Schema.Replace(',', ';')
-             x.HasHeaders.ToString()
-             x.AssumeMissingValues.ToString()
-             x.PreferOptionals.ToString()]
-        | Xml x -> 
-            ["Xml"
-             x.Sample
-             x.SampleIsList.ToString()
-             x.Global.ToString()
-             x.Culture]
-        | Json x -> 
-            ["Json"
-             x.Sample
-             x.SampleIsList.ToString()
-             x.RootName
-             x.Culture]
-        | WorldBank x -> 
-            ["WorldBank"
-             x.Sources
-             x.Asynchronous.ToString()]
-        | Freebase x -> 
-            ["Freebase"
-             x.NumIndividuals.ToString()
-             x.UseUnitsOfMeasure.ToString()
-             x.Pluralize.ToString()]
+        | Apiary x -> ["Apiary"
+                       x.ApiName]
         |> String.concat ","
 
     member x.ExpectedPath outputFolder = 
@@ -149,10 +33,9 @@ type TypeProviderInstantiation =
         let output = 
             x.GenerateType resolutionFolder runtimeAssembly
             |> match x with
-               | Freebase _ -> Debug.prettyPrint signatureOnly ignoreOutput 5 10
                | _ -> Debug.prettyPrint signatureOnly ignoreOutput 10 100
             |> replace "FSharp.Data.Runtime." "FDR."
-            |> replace resolutionFolder "<RESOLUTION_FOLDER>"
+            |> if String.IsNullOrEmpty resolutionFolder then id else replace resolutionFolder "<RESOLUTION_FOLDER>"
         if outputFolder <> "" then
             File.WriteAllText(x.ExpectedPath outputFolder, output)
         output
@@ -160,48 +43,11 @@ type TypeProviderInstantiation =
     static member Parse (line:string) =
         let args = line.Split [|','|]
         match args.[0] with
-        | "Csv" ->
-            Csv { Sample = args.[1]
-                  Separator = args.[2]
-                  Culture = args.[3]
-                  InferRows = Int32.MaxValue
-                  Schema = args.[4].Replace(';', ',')
-                  HasHeaders = args.[5] |> bool.Parse
-                  IgnoreErrors = false
-                  AssumeMissingValues = args.[6] |> bool.Parse
-                  PreferOptionals = args.[7] |> bool.Parse
-                  Quote = '"'
-                  MissingValues = String.Join(",", TextConversions.DefaultMissingValues)
-                  CacheRows = false
-                  ResolutionFolder = "" }
-        | "Xml" ->
-            Xml { Sample = args.[1]
-                  SampleIsList = args.[2] |> bool.Parse
-                  Global = args.[3] |> bool.Parse
-                  Culture = args.[4]
-                  ResolutionFolder = "" }
-        | "Json" ->
-            Json { Sample = args.[1]
-                   SampleIsList = args.[2] |> bool.Parse
-                   RootName = args.[3]
-                   Culture = args.[4] 
-                   ResolutionFolder = ""}
-        | "WorldBank" ->
-            WorldBank { Sources = args.[1]
-                        Asynchronous = args.[2] |> bool.Parse }
-        | "Freebase" ->
-            Freebase { Key = args.[1]
-                       NumIndividuals = args.[2] |> Int32.Parse
-                       UseUnitsOfMeasure = args.[3] |> bool.Parse
-                       Pluralize = args.[4] |> bool.Parse
-                       SnapshotDate = ""
-                       ServiceUrl = FreebaseQueries.DefaultServiceUrl
-                       LocalCache = true
-                       AllowLocalQueryEvaluation = true 
-                       UseRefinedTypes = true }
+        | "Apiary" ->
+            Apiary { ApiName = args.[1] }
         | _ -> failwithf "Unknown: %s" args.[0]
 
 open System.Runtime.CompilerServices
 
-[<assembly:InternalsVisibleToAttribute("FSharp.Data.Tests.DesignTime")>]
+[<assembly:InternalsVisibleToAttribute("ApiaryProvider.Tests.DesignTime")>]
 do()

@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30324.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7E48C05A-8C42-4871-A618-180BEEF696AA}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\contributing.md = docs\content\contributing.md
+		docs\content\index.md = docs\content\index.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{EF9F7922-4570-4D6D-8034-C3582756239B}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\generate.fsx = docs\tools\generate.fsx
+		docs\tools\generate.ja.fsx = docs\tools\generate.ja.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "templates", "templates", "{839C977B-55D4-4EFC-8B81-290357C836D3}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\templates\template.cshtml = docs\tools\templates\template.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{34171948-6CCE-448B-AA7D-A76FCE32A08E}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\library\ApiaryProvider.fsx = docs\content\library\ApiaryProvider.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ja", "ja", "{27BD4F2C-3450-4DC8-91F2-9C069C69585C}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\templates\ja\template.cshtml = docs\tools\templates\ja\template.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ja", "ja", "{CA5C64CE-E68C-4320-A00A-E67CA883B9D2}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\ja\contributing.md = docs\content\ja\contributing.md
+		docs\content\ja\index.md = docs\content\ja\index.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "library", "library", "{8121F368-9A9F-4AF8-8F48-4034AABFC811}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\ja\library\ApiaryProvider.fsx = docs\content\ja\library\ApiaryProvider.fsx
+	EndProjectSection
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ApiaryProvider.DesignTime.Tests", "tests\ApiaryProvider.DesignTime.Tests\ApiaryProvider.DesignTime.Tests.fsproj", "{D88C5D12-A7BD-4BED-A4CE-127D825EB9C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D88C5D12-A7BD-4BED-A4CE-127D825EB9C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D88C5D12-A7BD-4BED-A4CE-127D825EB9C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D88C5D12-A7BD-4BED-A4CE-127D825EB9C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D88C5D12-A7BD-4BED-A4CE-127D825EB9C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{34171948-6CCE-448B-AA7D-A76FCE32A08E} = {7E48C05A-8C42-4871-A618-180BEEF696AA}
+		{27BD4F2C-3450-4DC8-91F2-9C069C69585C} = {839C977B-55D4-4EFC-8B81-290357C836D3}
+		{CA5C64CE-E68C-4320-A00A-E67CA883B9D2} = {7E48C05A-8C42-4871-A618-180BEEF696AA}
+		{8121F368-9A9F-4AF8-8F48-4034AABFC811} = {CA5C64CE-E68C-4320-A00A-E67CA883B9D2}
+	EndGlobalSection
+EndGlobal

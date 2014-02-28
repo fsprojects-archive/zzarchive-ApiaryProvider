@@ -1,7 +1,7 @@
-﻿# F# Data: 試験的な型プロバイダ
+﻿# Apiary Provider: 試験的な型プロバイダ
 
-F# Dataライブラリの試験的な追加機能 (`FSharp.Data.Experimental.dll`) には
-F# Dataの高品質な水準に満たず、完全なテストも行われていないようなデータアクセス用の
+Apiary Providerライブラリの試験的な追加機能 (`ApiaryProvider.dll`) には
+Apiary Providerの高品質な水準に満たず、完全なテストも行われていないようなデータアクセス用の
 型プロバイダがあります
 
 この試験的なライブラリは新しい型プロバイダをテストする場合にうってつけの環境です。
@@ -9,7 +9,7 @@ F# Dataの高品質な水準に満たず、完全なテストも行われてい�
 世界中でそれを共有したいと思う場合には是非その型プロバイダを試験的なパッケージに
 コミットすることを検討してみてください！
 コードは [GitHub のメインリポジトリ][gh] に含まれますが、
-`FSharp.Data.Experimental.sln` ソリューションからのみ参照されるようにします。
+`ApiaryProvider.sln` ソリューションからのみ参照されるようにします。
 
 ## F# 型プロバイダ
 
@@ -19,7 +19,7 @@ REST APIを呼び出すような型プロバイダがあります。
 そのREST APIが標準的なパターンに準拠している場合には、
 この型プロバイダを使用すれば簡単にREST APIを呼び出せるようになります。
 
- * [F# Data: Apiary プロバイダ (試験用)](experimental/ApiaryProvider.html) - 
+ * [Apiary Provider: Apiary プロバイダ (試験用)](experimental/ApiaryProvider.html) - 
    `ApiaryProvider` 型に関する説明があります。
 
 ## 関連するプロジェクト
@@ -30,4 +30,4 @@ F#型プロバイダに関する包括的なコレクションとなることを
 さらに、このライブラリでは（現時点では）ドキュメントを **作成** するための
 APIは公開されていません。
 
-  [gh]: https://github.com/fsharp/FSharp.Data
+  [gh]: https://github.com/fsprojects/ApiaryProvider

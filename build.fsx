@@ -23,32 +23,29 @@ let (!!) includes = (!! includes).SetBaseDirectory __SOURCE_DIRECTORY__
 // Information about the project to be used at NuGet and in AssemblyInfo files
 // --------------------------------------------------------------------------------------
 
-let project = "FSharp.Data"
+let project = "ApiaryProvider"
 let authors = ["Tomas Petricek"; "Gustavo Guerra"]
-let summary = "Library of F# type providers and data access tools"
-let description = """
-  The F# Data library (FSharp.Data.dll) implements everything you need to access data
-  in your F# applications and scripts. It implements F# type providers for working with
-  structured file formats (CSV, JSON and XML) and for accessing the WorldBank and Freebase
-  data. It also includes helpers for parsing JSON and CSV files and for sending HTTP requests."""
-let tags = "F# fsharp data typeprovider WorldBank Freebase CSV XML JSON HTTP"
+let summary = "Type provider for Apiary.io"
+let description = "Type provider for Apiary.io"
+let tags = "F# fsharp data typeprovider Apiary"
 
-// Information for the project containing experimental providers
-let projectExperimental = "FSharp.Data.Experimental"
-let summaryExperimental = summary + " (experimental extensions)"
-let descriptionExperimental = description + """"
-  This package (FSharp.Data.Experimental.dll) adds additional type providers that are work
-  in progress and do not match high quality standards yet. Currently, it includes a type 
-  provider for Apiary.io."""
-let tagsExperimental = tags + " Apiary"
-
-let gitHome = "https://github.com/fsharp"
-let gitName = "FSharp.Data"
+let gitHome = "https://github.com/fsprojects"
+let gitName = "ApiaryProvider"
+let gitRaw = environVarOrDefault "gitRaw" "https://raw.github.com/fsprojects"
 
 // Read release notes & version info from RELEASE_NOTES.md
 let release = 
     File.ReadLines "RELEASE_NOTES.md" 
     |> ReleaseNotesHelper.parseReleaseNotes
+
+let isAppVeyorBuild = environVar "APPVEYOR" <> null
+let nugetVersion = 
+    if isAppVeyorBuild then sprintf "%s-a%s" release.NugetVersion (DateTime.UtcNow.ToString "yyMMddHHmm")
+    else release.NugetVersion
+
+Target "AppVeyorBuildVersion" (fun _ ->
+    Shell.Exec("appveyor", sprintf "UpdateBuild -Version \"%s\"" nugetVersion) |> ignore
+)
 
 // --------------------------------------------------------------------------------------
 // Generate assembly info files with the right version & up-to-date information
@@ -60,11 +57,7 @@ Target "AssemblyInfo" <| fun () ->
             Path.GetFileNameWithoutExtension file
             |> replace ".Portable47" ""
             |> replace ".Portable7" ""
-            |> replace "AssemblyInfo" "FSharp.Data"
-        let project, summary = 
-            if file.Contains "Experimental" 
-            then projectExperimental, summaryExperimental 
-            else project, summary
+            |> replace "AssemblyInfo" "ApiaryProvider"
         let versionSuffix =
             if file.Contains ".Portable47" then ".47"
             elif file.Contains ".Portable7" then ".7"
@@ -90,28 +83,19 @@ let internetCacheFolder = Environment.GetFolderPath(Environment.SpecialFolder.In
 
 Target "CleanInternetCaches" <| fun () ->
     CleanDirs [internetCacheFolder @@ "ApiarySchema"
-               internetCacheFolder @@ "DesignTimeURIs"
-               internetCacheFolder @@ "FreebaseSchema"
-               internetCacheFolder @@ "FreebaseRuntime"
-               internetCacheFolder @@ "WorldBankSchema"
-               internetCacheFolder @@ "WorldBankRuntime"]
+               internetCacheFolder @@ "DesignTimeURIs"]
 
 // --------------------------------------------------------------------------------------
 // Build library & test projects
 
-let runningOnMono = Type.GetType("Mono.Runtime") <> null
-let runningOnTeamCity = buildServer = TeamCity
-
 Target "Build" <| fun () ->
-    (if runningOnMono then (!! "FSharp.Data.sln") else (!! "FSharp.Data.sln" ++ "FSharp.Data.ExtraPlatforms.sln"))
+    !! "ApiaryProvider.sln"
     |> MSBuildRelease "" "Rebuild"
     |> ignore
 
 Target "BuildTests" <| fun () ->
-    !! "FSharp.Data.Tests.sln"
-    |> MSBuildReleaseExt "" (if runningOnMono then ["DefineConstants","MONO"]
-                             elif runningOnTeamCity then ["DefineConstants","TEAM_CITY"]
-                             else []) "Rebuild"
+    !! "ApiaryProvider.Tests.sln"
+    |> MSBuildRelease "" "Rebuild"
     |> ignore
 
 // --------------------------------------------------------------------------------------
@@ -127,12 +111,11 @@ let runTestTask name =
                 DisableShadowCopy = true
                 TimeOut = TimeSpan.FromMinutes 20.
                 Framework = "4.0"
-                Domain = "Multiple"
+                Domain = MultipleDomainModel
                 OutputFile = "TestResults.xml" })
     taskName ==> "RunTests" |> ignore
 
-["FSharp.Data.Tests";"FSharp.Data.Tests.DesignTime";
- "FSharp.Data.Tests.Documentation";"FSharp.Data.Tests.Experimental.DesignTime"]
+["ApiaryProvider.DesignTime.Tests"]
 |> List.iter runTestTask
 
 // --------------------------------------------------------------------------------------
@@ -154,13 +137,13 @@ Target "SourceLink" <| fun () ->
         let files = proj.Compiles -- "**/AssemblyInfo*.fs" 
         repo.VerifyChecksums files
         proj.VerifyPdbChecksums files
-        proj.CreateSrcSrv "https://raw.github.com/fsharp/FSharp.Data/{0}/%var2%" repo.Revision (repo.Paths files)
+        proj.CreateSrcSrv (sprintf "%s/%s/{0}/%%var2%%" gitRaw gitName) repo.Revision (repo.Paths files)
         Pdbstr.exec proj.OutputFilePdb proj.OutputFilePdbSrcSrv
-    CopyFiles "bin" (!! "src/bin/Release/FSharp.Data.*")
-    CopyFiles "bin/portable7" (!! "src/bin/portable7/Release/FSharp.Data.*")
-    CopyFiles "bin/portable7" (!! "src/bin/Release/FSharp.*.DesignTime.*")
-    CopyFiles "bin/portable47" (!! "src/bin/portable47/Release/FSharp.Data.*")    
-    CopyFiles "bin/portable47" (!! "src/bin/Release/FSharp.*.DesignTime.*")
+    CopyFiles "bin" (!! "src/bin/Release/ApiaryProvider.*")
+    CopyFiles "bin/portable7" (!! "src/bin/portable7/Release/ApiaryProvider.*")
+    CopyFiles "bin/portable7" (!! "src/bin/Release/fsprojects.*.DesignTime.*")
+    CopyFiles "bin/portable47" (!! "src/bin/portable47/Release/ApiaryProvider.*")    
+    CopyFiles "bin/portable47" (!! "src/bin/Release/fsprojects.*.DesignTime.*")
 
 #endif
 
@@ -168,9 +151,6 @@ Target "SourceLink" <| fun () ->
 // Build a NuGet package
 
 Target "NuGet" <| fun () ->
-    // Format the description to fit on a single line (remove \r\n and double-spaces)
-    let description = description
-    let descriptionExperimental = descriptionExperimental.Replace("\r", "").Replace("\n", "").Replace("  ", " ")
     // Format the release notes
     let releaseNotes = release.Notes |> String.concat "\n"
     NuGet (fun p -> 
@@ -179,28 +159,14 @@ Target "NuGet" <| fun () ->
             Project = project
             Summary = summary
             Description = description
-            Version = release.NugetVersion
+            Version = nugetVersion
             ReleaseNotes = releaseNotes
             Tags = tags
             OutputPath = "bin"
             AccessKey = getBuildParamOrDefault "nugetkey" ""
             Publish = hasBuildParam "nugetkey"
             Dependencies = [] })
-        "nuget/FSharp.Data.nuspec"
-    NuGet (fun p -> 
-        { p with   
-            Authors = authors
-            Project = projectExperimental
-            Summary = summaryExperimental
-            Description = descriptionExperimental
-            Version = release.NugetVersion
-            ReleaseNotes = releaseNotes
-            Tags = tagsExperimental
-            OutputPath = "bin"
-            AccessKey = getBuildParamOrDefault "nugetkey" ""
-            Publish = hasBuildParam "nugetkey"
-            Dependencies = [] })
-        "nuget/FSharp.Data.Experimental.nuspec"
+        "nuget/ApiaryProvider.nuspec"
 
 // --------------------------------------------------------------------------------------
 // Generate the documentation
@@ -250,7 +216,7 @@ Target "Help" <| fun () ->
     printfn "  * RunTests"
     printfn "  * All (calls previous 3)"
     printfn ""
-    printfn "  Targets for releasing (requires write access to the 'https://github.com/fsharp/FSharp.Data.git' repository):"
+    printfn "  Targets for releasing (requires write access to the 'https://github.com/fsprojects/ApiaryProvider.git' repository):"
     printfn "  * GenerateDocs"
     printfn "  * ReleaseDocs (calls previous)"
     printfn "  * ReleaseBinaries"
@@ -261,7 +227,7 @@ Target "Help" <| fun () ->
     printfn "  * CleanInternetCaches"
 #if MONO
 #else
-    printfn "  * SourceLink (requires autocrlf=false)"
+    printfn "  * SourceLink (requires autocrlf=input)"
 #endif
     printfn ""
 

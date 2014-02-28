@@ -1,7 +1,7 @@
 ﻿// --------------------------------------------------------------------------------------
 // Apiary type provider - schema extraction (from the JSON blueprint API)
 // --------------------------------------------------------------------------------------
-namespace ProviderImplementation
+namespace ApiaryProvider.ProviderImplementation
 
 open System
 open System.IO
@@ -143,6 +143,14 @@ module ApiarySchema =
 module ApiarySchemaAuto = 
   open ApiarySchema
 
+  let appendQueryToUrl(url:string, query, valuesArePlaceholders) =
+    match query with
+    | [] -> url
+    | query ->
+        url
+        + if url.Contains "?" then "&" else "?"
+        + String.concat "&" [ for k, v in query -> Uri.EscapeUriString k + "=" + if valuesArePlaceholders then v else Uri.EscapeUriString v ]
+
   /// Find an operation that uses HTTP method specified by 'findMeth'
   /// and return the arguments together with (the method and) a path
   let (|FindMethod|_|) specialNames findMeth (ops:list<string * string>) =
@@ -160,7 +168,7 @@ module ApiarySchemaAuto =
               let name = name.Replace(path.Substring(x), "")
               let args = path.Substring(x+2, y-x-2).Split(',') |> List.ofArray
               let argsWithBraces = [ for arg in args -> "{" + arg + "}" ]
-              let servicePath = Http.AppendQueryToUrl(path.Substring(0, x), List.zip args argsWithBraces, true)
+              let servicePath = appendQueryToUrl(path.Substring(0, x), List.zip args argsWithBraces, true)
               name, argsWithBraces, servicePath
           | _, _ -> 
               let segments = 

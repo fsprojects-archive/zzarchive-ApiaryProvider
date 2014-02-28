@@ -2,15 +2,19 @@
 // Apiary type provider - type builder
 // --------------------------------------------------------------------------------------
 
-namespace ProviderImplementation
+namespace ApiaryProvider.ProviderImplementation
 
 open System
+open System.Collections.Generic
 open System.Globalization
 open Microsoft.FSharp.Quotations
 open FSharp.Data
+open FSharp.Data.Runtime
 open FSharp.Data.JsonExtensions
 open FSharp.Data.Runtime
 open FSharp.Data.Runtime.StructuralTypes
+open ApiaryProvider.Runtime
+open ProviderImplementation
 open ProviderImplementation.ProvidedTypes
 
 type internal ApiaryGenerationContext =
@@ -29,7 +33,7 @@ type internal ApiaryGenerationContext =
       Replacer = replacer 
       UniqueNiceName = uniqueNiceName
       ApiaryContextSelector = fun e -> <@ (%%e:ApiaryContext) :> InternalApiaryContext @> 
-      JsonContext = JsonGenerationContext.Create("", tpType, typeof<ApiaryDocument>, replacer, uniqueNiceName) 
+      JsonContext = JsonGenerationContext.Create("", tpType, typeof<ApiaryDocument>, replacer, uniqueNiceName, Dictionary(), false) 
       SpecialNames = specialNames } 
 
 module internal ApiaryTypeBuilder = 
@@ -57,9 +61,10 @@ module internal ApiaryTypeBuilder =
             | None -> () ]
 
     let result =
-      [ for item in samples -> JsonInference.inferType CultureInfo.InvariantCulture (*allowEmptyValues*)false name item ]
+      [ for item in samples -> JsonInference.inferType CultureInfo.InvariantCulture name item ]
       |> Seq.fold (StructuralInference.subtypeInfered (*allowEmptyValues*)false) InferedType.Top
-      |> JsonTypeBuilder.generateJsonType ctx.JsonContext (*canPassAllConversionCallingTypes*)false (*optionalityHandledByParent*)false
+      |> JsonTypeBuilder.generateJsonType ctx.JsonContext (*canPassAllConversionCallingTypes*)false (*optionalityHandledByParent*)false name
+
     result.ConvertedType, result.GetConverter ctx.JsonContext
 
   let ensureGeneratedType ctx parentName (entityTy:Type) = 
@@ -122,7 +127,7 @@ module internal ApiaryTypeBuilder =
               Headers = headers; Query = query } @>
 
     // Generate two versions of the method - synchronous and asynchronous
-    let asyncResTy = typedefof<Async<_>>.MakeGenericType [| resultTy |]
+    let asyncResTy = typedefof<Async<_>>.MakeGenericType [| resultTy |] |> ctx.Replacer.ToRuntime
     let asyncM = ProvidedMethod("Async" + name, providedArgs, asyncResTy)
     let normalM = ProvidedMethod(name, providedArgs, resultTy)
     normalM.InvokeCode <- fun parameters ->

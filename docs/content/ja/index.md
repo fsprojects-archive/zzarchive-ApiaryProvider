@@ -1,7 +1,7 @@
-F# Data: データアクセス用ライブラリ
+Apiary Provider: データアクセス用ライブラリ
 ===================================
 
-F# Data ライブラリ (`FSharp.Data.dll`) にはF#アプリケーションやスクリプトから
+Apiary Provider ライブラリ (`ApiaryProvider.dll`) にはF#アプリケーションやスクリプトから
 データにアクセスする際に必要となるすべての機能が揃えられています。
 このライブラリには構造的な形式を持ったファイル（CSVやJSON、XML）を
 操作するためのF#型プロバイダや、WorldBankやFreebaseのデータにアクセスするための
@@ -13,12 +13,12 @@ HTTPリクエストを送信するための機能もあります。
   <div class="span1"></div>
   <div class="span6">
     <div class="well well-small" id="nuget">
-      F# Data Libraryは <a href="https://nuget.org/packages/FSharp.Data">NuGetの
-      FSharp.Dataパッケージ</a>として公開されています。
+      Apiary Provider Libraryは <a href="https://nuget.org/packages/ApiaryProvider">NuGetの
+      ApiaryProviderパッケージ</a>として公開されています。
       ライブラリをインストールするには、
       <a href="http://docs.nuget.org/docs/start-here/using-the-package-manager-console">
       パッケージ マネージャー コンソール</a>上から以下のコマンドを実行します：
-      <pre>PM> Install-Package FSharp.Data</pre>
+      <pre>PM> Install-Package ApiaryProvider</pre>
     </div>
   </div>
   <div class="span1"></div>
@@ -27,27 +27,6 @@ HTTPリクエストを送信するための機能もあります。
 あるいは [ソースコードをZIPファイルとしてダウンロード][source] したり、
 [コンパイル済みバイナリ][compiled] をZIPファイルとして
 ダウンロードすることもできます。
-
-ドキュメント
-------------
-
-このライブラリの重要な利点の1つとしては、包括的なドキュメントが
-揃えられているということです。
-ドキュメントはいずれも [samples フォルダ][samples] 内にある `*.fsx`
-ファイルから自動生成されています。
-もしも誤字脱字など見つけた場合には是非pullリクエストを投げてください！
-
- * [F# Data](fsharpdata.html) はドキュメントのホームページで、
-   それぞれの型プロバイダ（CSVやXML、JSON、WorldBank、Freebase）に関する
-   ドキュメントへのリンクが揃っています。
-   また、 `FSharp.Data.dll` 内のpublic型に関するドキュメントへのリンクもあります。
-
- * [F# Data 試験用](experimental.html) はF# Dataの試験的な拡張機能に関する
-   ドキュメントです。
-   この試験的なライブラリには品質がまだ高い水準に達していないような
-   型プロバイダがあります。
-   現時点ではこのライブラリには [apiary.io](http://apiary.io) を使用して
-   ドキュメント化されたREST APIに関する型プロバイダがあります。is a documentation for 
  
 貢献方法
 ------------
@@ -65,7 +44,7 @@ pullリクエストを投げたりすることができます。
 
  * ライブラリのアーキテクチャや構成、その他の話題
    (たとえばWindows PhoneやSilverlightなどのためのポータブルライブラリサポート)
-   など、より詳しい話題については [F# Data に貢献する](contributing.html)
+   など、より詳しい話題については [Apiary Provider に貢献する](contributing.html)
    のページを参照してください。
 
 ### ライブラリの方針
@@ -86,10 +65,10 @@ F#型プロバイダに関する包括的なコレクションとなることを
 
 
 
-  [source]: https://github.com/fsharp/FSharp.Data/zipball/master
-  [compiled]: https://github.com/fsharp/FSharp.Data/zipball/release
-  [samples]: https://github.com/fsharp/FSharp.Data/tree/master/samples
-  [gh]: https://github.com/fsharp/FSharp.Data
-  [issues]: https://github.com/fsharp/FSharp.Data/issues
-  [license]: https://github.com/fsharp/FSharp.Data/blob/master/LICENSE.md
+  [source]: https://github.com/fsprojects/ApiaryProvider/zipball/master
+  [compiled]: https://github.com/fsprojects/ApiaryProvider/zipball/release
+  [samples]: https://github.com/fsprojects/ApiaryProvider/tree/master/samples
+  [gh]: https://github.com/fsprojects/ApiaryProvider
+  [issues]: https://github.com/fsprojects/ApiaryProvider/issues
+  [license]: https://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md
   [fsharp-oss]: http://groups.google.com/group/fsharp-opensource

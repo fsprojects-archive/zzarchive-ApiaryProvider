@@ -2,11 +2,12 @@
 // Apiary type provider - runtime components
 // --------------------------------------------------------------------------------------
 
-namespace FSharp.Data.Runtime
+namespace ApiaryProvider.Runtime
 
 open System
 open System.ComponentModel
 open FSharp.Data
+open FSharp.Data.Runtime
 
 module internal ApiaryUtils =
   let formatHeaders headers = 
