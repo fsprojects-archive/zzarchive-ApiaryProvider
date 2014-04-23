@@ -41,7 +41,7 @@ solution before trying out the samples to ensure that all needed packages are in
 ## Support and community
 
  - If you have a question about `ApiaryProvider`, ask at StackOverflow. 
- - If you want to submit a bug, a feature request or help witht fixing bugs then look at [issues](https://github.com/fsprojects/ApiaryProvider/issues) and read [contributing to F# Data](http://fsharp.github.io/ApiaryProvider/contributing.html).
+ - If you want to submit a bug, a feature request or help witht fixing bugs then look at [issues](https://github.com/fsprojects/ApiaryProvider/issues) and read [contributing to Apiary Provider](http://fsprojects.github.io/ApiaryProvider/contributing.html).
  - To discuss more general issues about F# Data, its goals and other open-source F# projects, join the [fsharp-opensource mailing list](http://groups.google.com/group/fsharp-opensource)
 
 ## Library license
