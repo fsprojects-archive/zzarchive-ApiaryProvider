@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Apiary Provider: データアクセス用ライブラリ
+</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Apiary Provider library implements type providers for working with structured file formats (CSV, JSON and XML) and for accessing the WorldBank and Freebase data. It also includes helpers for other data-related tasks.">
+    <meta name="author" content="Tomas Petricek; Gustavo Guerra">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/ApiaryProvider/ja/../content/style.css" />
+    <script type="text/javascript" src="/ApiaryProvider/ja/../content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Charting/"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Charting.png"/> F# Charting</a></li>
+          <li><a href="http://bluemountaincapital.github.io/Deedle"><img height="16" width="16" src="http://fsharp.org/images/thumbs/Deedle.png"/> Deedle</a></li>
+        </ul>
+        <h3 class="muted"><a href="/ApiaryProvider/ja/index.html">Apiary Provider</a> <a href="/ApiaryProvider/ja/../index.html">(En)</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+<h1>Apiary Provider: データアクセス用ライブラリ</h1>
+
+<p>Apiary Provider ライブラリ (<code>ApiaryProvider.dll</code>) にはF#アプリケーションやスクリプトから
+データにアクセスする際に必要となるすべての機能が揃えられています。
+このライブラリには構造的な形式を持ったファイル（CSVやJSON、XML）を
+操作するためのF#型プロバイダや、WorldBankやFreebaseのデータにアクセスするための
+型プロバイダがあります。
+また、JSONやCSVファイルを解析する機能や、
+HTTPリクエストを送信するための機能もあります。</p>
+
+<div class="row">
+  <div class="span1"></div>
+  <div class="span6">
+    <div class="well well-small" id="nuget">
+      Apiary Provider Libraryは <a href="https://nuget.org/packages/ApiaryProvider">NuGetの
+      ApiaryProviderパッケージ</a>として公開されています。
+      ライブラリをインストールするには、
+      <a href="http://docs.nuget.org/docs/start-here/using-the-package-manager-console">
+      パッケージ マネージャー コンソール</a>上から以下のコマンドを実行します：
+      <pre>PM> Install-Package ApiaryProvider</pre>
+    </div>
+  </div>
+  <div class="span1"></div>
+</div>
+
+<p>あるいは <a href="https://github.com/fsprojects/ApiaryProvider/zipball/master">ソースコードをZIPファイルとしてダウンロード</a> したり、
+<a href="https://github.com/fsprojects/ApiaryProvider/zipball/release">コンパイル済みバイナリ</a> をZIPファイルとして
+ダウンロードすることもできます。</p>
+
+<h2>貢献方法</h2>
+
+<p>プロジェクトは <a href="https://github.com/fsprojects/ApiaryProvider">GitHub</a> 上でホストされており、
+<a href="https://github.com/fsprojects/ApiaryProvider/issues">Issue(問題)を報告</a> したり、プロジェクトをフォークして
+pullリクエストを投げたりすることができます。
+公開APIを独自に追加した場合、是非 <a href="https://github.com/fsprojects/ApiaryProvider/tree/master/samples">samples</a> にもそれを反映して、
+ドキュメント化されるようにしてください。</p>
+
+<ul>
+<li><p>不具合あるいはライブラリに追加する機能に関する議論がある場合には
+GitHub上で <a href="https://github.com/fsprojects/ApiaryProvider/issues">不具合または新機能</a> に関するNew Issueを投稿するか、
+<a href="http://groups.google.com/group/fsharp-opensource">F# オープンソース</a> (英語)のメーリングリストに
+メールを投げてください。</p></li>
+<li><p>ライブラリのアーキテクチャや構成、その他の話題
+(たとえばWindows PhoneやSilverlightなどのためのポータブルライブラリサポート)
+など、より詳しい話題については <a href="contributing.html">Apiary Provider に貢献する</a>
+のページを参照してください。</p></li>
+</ul>
+
+<h3>ライブラリの方針</h3>
+
+<p>このライブラリは構造的なドキュメントやその他のデータソースに対して、
+単純かつ読み取り専用のアクセスをサポートすることに重点を置いています。
+F#型プロバイダに関する包括的なコレクションとなることを意図しているわけではありません
+（一般的にはF#型プロバイダには様々な用途があります）。
+さらに、このライブラリでは（現時点では）ドキュメントを作成したり、
+変更したりするようなAPIは公開されていません。</p>
+
+<h3>ライブラリのライセンス</h3>
+
+<p>ライブラリは Apache 2.0ライセンスの元に公開されています。
+詳細についてはGitHubレポジトリ内の <a href="https://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">ライセンスファイル</a> を参照してください。
+要約すると、このライブラリは自由に商用利用したり、
+派生のライブラリを作成したり、変更したりすることができるということです。</p>
+
+
+        </div>
+        <div class="span3">
+          <a href="/ApiaryProvider/ja/index.html">
+            <img src="/ApiaryProvider/ja/../images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">Apiary Provider</li>
+            <li class="divider"></li>
+            <li><a href="https://nuget.org/packages/ApiaryProvider">NuGet経由でライブラリを取得</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider">GitHub上のソースコード</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">License (Apache 2.0)</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/RELEASE_NOTES.md">リリースノート</a></li>
+            <li><span>
+                <a href="/ApiaryProvider/ja/contributing.html">Apiary Providerに貢献する</a>
+                (<a href="/ApiaryProvider/ja/../contributing.html">En</a>)
+                </span></li>
+            
+            <li class="nav-header">Apiary Provider ライブラリ</li>            
+            <li><span>
+                <a href="/ApiaryProvider/ja">はじめに</a>
+                (<a href="/ApiaryProvider/ja/../">En</a>)
+                </span></li>
+            <li><span>
+                <a href="/ApiaryProvider/ja/library/ApiaryProvider.html">Apiary 型プロバイダー</a>
+                (<a href="/ApiaryProvider/ja/../library/ApiaryProvider.html">En</a>)
+                </span></li>
+
+            <li class="nav-header">リファレンス</li>
+            <li><span>
+                <a href="/ApiaryProvider/ja/../reference/index.html">API リファレンス (En)</a>
+                </span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/ApiaryProvider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>StructuralInference - Apiary Provider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tomas Petricek; Gustavo Guerra">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/ApiaryProvider/content/style.css" />
+    <script type="text/javascript" src="/ApiaryProvider/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data/"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.png"/> F# Data</a></li>
+        </ul>
+        <h3 class="muted"><a href="/ApiaryProvider/index.html">Apiary Provider</a> <a href="/ApiaryProvider/ja/index.html">(Ja)</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>StructuralInference</h1>
+<div class="xmldoc">
+<p>Implements type inference for unstructured documents like XML or JSON</p>
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '113', 113)" onmouseover="showTip(event, '113', 113)">
+            getInferedTypeFromString (...)
+          </code>
+          <div class="tip" id="113">
+            <strong>Signature:</strong> cultureInfo:CultureInfo -&gt; value:string -&gt; unit:Type option -&gt; InferedType<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Infers the type of a simple string value</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '114', 114)" onmouseover="showTip(event, '114', 114)">
+            inferCollectionType (...)
+          </code>
+          <div class="tip" id="114">
+            <strong>Signature:</strong> allowEmptyValues:bool -&gt; types:seq&lt;InferedType&gt; -&gt; InferedType<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Infer the type of the collection based on multiple sample types
+(group the types by tag, count their multiplicity)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '115', 115)" onmouseover="showTip(event, '115', 115)">
+            inferPrimitiveType cultureInfo value
+          </code>
+          <div class="tip" id="115">
+            <strong>Signature:</strong> cultureInfo:CultureInfo -&gt; value:string -&gt; Type<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Infers the type of a simple string value
+Returns one of null|typeof<Bit0>|typeof<Bit1>|typeof<bool>|typeof<int>|typeof<int64>|typeof<decimal>|typeof<float>|typeof<Guid>|typeof<DateTime>|typeof<string></p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '116', 116)" onmouseover="showTip(event, '116', 116)">
+            subtypeInfered allowEmptyValues ot1 ot2
+          </code>
+          <div class="tip" id="116">
+            <strong>Signature:</strong> allowEmptyValues:bool -&gt; ot1:InferedType -&gt; ot2:InferedType -&gt; InferedType<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Find common subtype of two infered types:</p>
+
+<ul>
+<li>If the types are both primitive, then we find common subtype of the primitive types</li>
+<li>If the types are both records, then we union their fields (and mark some as optional)</li>
+<li>If the types are both collections, then we take subtype of their elements
+(note we do not generate heterogeneous types in this case!)</li>
+<li>If one type is the Top type, then we return the other without checking</li>
+<li>If one of the types is the Null type and the other is not a value type
+(numbers or booleans, but not string) then we return the other type.
+Otherwise, we return bottom.</li>
+</ul>
+
+<p>The contract that should hold about the function is that given two types with the
+same <code>InferedTypeTag</code>, the result also has the same <code>InferedTypeTag</code>.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '117', 117)" onmouseover="showTip(event, '117', 117)">
+            supportsUnitsOfMeasure typ
+          </code>
+          <div class="tip" id="117">
+            <strong>Signature:</strong> typ:Type -&gt; bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Checks whether a type supports unit of measure</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '118', 118)" onmouseover="showTip(event, '118', 118)">
+            typeTag _arg1
+          </code>
+          <div class="tip" id="118">
+            <strong>Signature:</strong> _arg1:InferedType -&gt; InferedTypeTag<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a tag of a type - a tag represents a 'kind' of type 
+(essentially it describes the different bottom types we have)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '119', 119)" onmouseover="showTip(event, '119', 119)">
+            unionRecordTypes allowEmptyValues t1 t2
+          </code>
+          <div class="tip" id="119">
+            <strong>Signature:</strong> allowEmptyValues:bool -&gt; t1:InferedProperty list -&gt; t2:InferedProperty list -&gt; InferedProperty list<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Get the union of record types (merge their properties)
+This matches the corresponding members and marks them as <code>Optional</code>
+if one may be missing. It also returns subtype of their types.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <a href="/ApiaryProvider/index.html">
+            <img src="/ApiaryProvider/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">Apiary Provider</li>
+            <li class="divider"></li>
+            <li><a href="https://nuget.org/packages/ApiaryProvider">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">License (Apache 2.0)</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="/ApiaryProvider/contributing.html">Contributing to Apiary Provider</a></li>
+            
+            <li class="nav-header">Apiary Provider Library</li>
+            <li><a href="/ApiaryProvider">Introduction</a></li>
+            <li><a href="/ApiaryProvider/library/ApiaryProvider.html">Apiary Type Provider</a></li>
+
+            <li class="nav-header">Reference</li>
+            <li><a href="/ApiaryProvider/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/ApiaryProvider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>

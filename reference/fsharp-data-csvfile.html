@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CsvFile - Apiary Provider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tomas Petricek; Gustavo Guerra">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/ApiaryProvider/content/style.css" />
+    <script type="text/javascript" src="/ApiaryProvider/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data/"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.png"/> F# Data</a></li>
+        </ul>
+        <h3 class="muted"><a href="/ApiaryProvider/index.html">Apiary Provider</a> <a href="/ApiaryProvider/ja/index.html">(Ja)</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>CsvFile</h1>
+<div class="xmldoc">
+<p>Represents a CSV file. The lines are read on demand from <code>reader</code>.
+Columns are delimited by one of the chars passed by <code>separators</code> (defaults to just <code>,</code>), and
+to escape the separator chars, the <code>quote</code> character will be used (defaults to <code>"</code>).
+If <code>hasHeaders</code> is true (the default), the first line read by <code>reader</code> will not be considered part of data.
+If <code>ignoreErrors</code> is true (the default is false), rows with a different number of columns from the header row
+(or the first row if headers are not present) will be ignored.</p>
+</div>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '150', 150)" onmouseover="showTip(event, '150', 150)">
+            Cache()
+          </code>
+          <div class="tip" id="150">
+            <strong>Signature:</strong> unit -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a new csv with the same rows as the original but which guarantees
+that each row will be only be read and parsed from the input at most once.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '152', 152)" onmouseover="showTip(event, '152', 152)">
+            Filter(predicate)
+          </code>
+          <div class="tip" id="152">
+            <strong>Signature:</strong> predicate:Func&lt;&#39;RowType,bool&gt; -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a new csv containing only the rows for which the given predicate returns "true".</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '153', 153)" onmouseover="showTip(event, '153', 153)">
+            Headers
+          </code>
+          <div class="tip" id="153">
+            <strong>Signature:</strong> string [] option<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The names of the columns</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '154', 154)" onmouseover="showTip(event, '154', 154)">
+            NumberOfColumns
+          </code>
+          <div class="tip" id="154">
+            <strong>Signature:</strong> int<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The number of columns</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '155', 155)" onmouseover="showTip(event, '155', 155)">
+            Quote
+          </code>
+          <div class="tip" id="155">
+            <strong>Signature:</strong> char<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The quotation mark use for surrounding values containing separator chars</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '156', 156)" onmouseover="showTip(event, '156', 156)">
+            Rows
+          </code>
+          <div class="tip" id="156">
+            <strong>Signature:</strong> seq&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The rows with data</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '157', 157)" onmouseover="showTip(event, '157', 157)">
+            Save(path, ?separator, ?quote)
+          </code>
+          <div class="tip" id="157">
+            <strong>Signature:</strong> (path:string * separator:char option * quote:char option) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Saves CSV to the specified file</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '158', 158)" onmouseover="showTip(event, '158', 158)">
+            Save(stream, ?separator, ?quote)
+          </code>
+          <div class="tip" id="158">
+            <strong>Signature:</strong> (stream:Stream * separator:char option * quote:char option) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Saves CSV to the specified stream</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '159', 159)" onmouseover="showTip(event, '159', 159)">
+            Save(writer, ?separator, ?quote)
+          </code>
+          <div class="tip" id="159">
+            <strong>Signature:</strong> (writer:TextWriter * separator:char option * quote:char option) -&gt; unit<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Saves CSV to the specified writer</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '160', 160)" onmouseover="showTip(event, '160', 160)">
+            SaveToString(?separator, ?quote)
+          </code>
+          <div class="tip" id="160">
+            <strong>Signature:</strong> (separator:char option * quote:char option) -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Saves CSV to a string</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '161', 161)" onmouseover="showTip(event, '161', 161)">
+            Separators
+          </code>
+          <div class="tip" id="161">
+            <strong>Signature:</strong> string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The character(s) used as column separator(s)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '162', 162)" onmouseover="showTip(event, '162', 162)">
+            Skip(count)
+          </code>
+          <div class="tip" id="162">
+            <strong>Signature:</strong> count:int -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a csv that skips N rows and then yields the remaining rows.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '163', 163)" onmouseover="showTip(event, '163', 163)">
+            SkipWhile(predicate)
+          </code>
+          <div class="tip" id="163">
+            <strong>Signature:</strong> predicate:Func&lt;&#39;RowType,bool&gt; -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a csv that, when iterated, skips rows while the given predicate returns
+<c>true</c>, and then yields the remaining rows.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '164', 164)" onmouseover="showTip(event, '164', 164)">
+            Take(count)
+          </code>
+          <div class="tip" id="164">
+            <strong>Signature:</strong> count:int -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a new csv with only the first N rows of the underlying csv.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '165', 165)" onmouseover="showTip(event, '165', 165)">
+            TakeWhile(predicate)
+          </code>
+          <div class="tip" id="165">
+            <strong>Signature:</strong> predicate:Func&lt;&#39;RowType,bool&gt; -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a csv that, when iterated, yields rowswhile the given predicate
+returns <c>true</c>, and then returns no further rows.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '166', 166)" onmouseover="showTip(event, '166', 166)">
+            Truncate(count)
+          </code>
+          <div class="tip" id="166">
+            <strong>Signature:</strong> count:int -&gt; CsvFile&lt;&#39;RowType&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Returns a csv that when enumerated returns at most N rows.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '167', 167)" onmouseover="showTip(event, '167', 167)">
+            AsyncLoad(...)
+          </code>
+          <div class="tip" id="167">
+            <strong>Signature:</strong> (uri:string * separators:string option * quote:char option * hasHeaders:bool option * ignoreErrors:bool option) -&gt; Async&lt;CsvFile&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads CSV from the specified uri asynchronously</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '168', 168)" onmouseover="showTip(event, '168', 168)">
+            Load(...)
+          </code>
+          <div class="tip" id="168">
+            <strong>Signature:</strong> (uri:string * separators:string option * quote:char option * hasHeaders:bool option * ignoreErrors:bool option) -&gt; CsvFile<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads CSV from the specified uri</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '169', 169)" onmouseover="showTip(event, '169', 169)">
+            Load(...)
+          </code>
+          <div class="tip" id="169">
+            <strong>Signature:</strong> (reader:TextReader * separators:string option * quote:char option * hasHeaders:bool option * ignoreErrors:bool option) -&gt; CsvFile<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads CSV from the specified reader</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '170', 170)" onmouseover="showTip(event, '170', 170)">
+            Load(...)
+          </code>
+          <div class="tip" id="170">
+            <strong>Signature:</strong> (stream:Stream * separators:string option * quote:char option * hasHeaders:bool option * ignoreErrors:bool option) -&gt; CsvFile<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads CSV from the specified stream</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '171', 171)" onmouseover="showTip(event, '171', 171)">
+            Parse(...)
+          </code>
+          <div class="tip" id="171">
+            <strong>Signature:</strong> (text:string * separators:string option * quote:char option * hasHeaders:bool option * ignoreErrors:bool option) -&gt; CsvFile<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Parses the specified CSV content</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <a href="/ApiaryProvider/index.html">
+            <img src="/ApiaryProvider/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">Apiary Provider</li>
+            <li class="divider"></li>
+            <li><a href="https://nuget.org/packages/ApiaryProvider">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">License (Apache 2.0)</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="/ApiaryProvider/contributing.html">Contributing to Apiary Provider</a></li>
+            
+            <li class="nav-header">Apiary Provider Library</li>
+            <li><a href="/ApiaryProvider">Introduction</a></li>
+            <li><a href="/ApiaryProvider/library/ApiaryProvider.html">Apiary Type Provider</a></li>
+
+            <li class="nav-header">Reference</li>
+            <li><a href="/ApiaryProvider/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/ApiaryProvider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>

@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HttpRequestHeaders - Apiary Provider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tomas Petricek; Gustavo Guerra">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/ApiaryProvider/content/style.css" />
+    <script type="text/javascript" src="/ApiaryProvider/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data/"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.png"/> F# Data</a></li>
+        </ul>
+        <h3 class="muted"><a href="/ApiaryProvider/index.html">Apiary Provider</a> <a href="/ApiaryProvider/ja/index.html">(Ja)</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>HttpRequestHeaders</h1>
+<div class="xmldoc">
+<p>Header to send in an HTTP request</p>
+</div>
+
+<!-- Render nested types and modules, if there are any -->
+
+  <h3>Functions and values</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Function or value</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '9', 9)" onmouseover="showTip(event, '9', 9)">
+            Accept contentType
+          </code>
+          <div class="tip" id="9">
+            <strong>Signature:</strong> contentType:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Content-Types that are acceptable for the response</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '25', 25)" onmouseover="showTip(event, '25', 25)">
+            AcceptCharset characterSets
+          </code>
+          <div class="tip" id="25">
+            <strong>Signature:</strong> characterSets:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Character sets that are acceptable</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '26', 26)" onmouseover="showTip(event, '26', 26)">
+            AcceptDatetime dateTime
+          </code>
+          <div class="tip" id="26">
+            <strong>Signature:</strong> dateTime:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Acceptable version in time</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '27', 27)" onmouseover="showTip(event, '27', 27)">
+            AcceptEncoding encoding
+          </code>
+          <div class="tip" id="27">
+            <strong>Signature:</strong> encoding:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>List of acceptable encodings. See HTTP compression.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '28', 28)" onmouseover="showTip(event, '28', 28)">
+            AcceptLanguage language
+          </code>
+          <div class="tip" id="28">
+            <strong>Signature:</strong> language:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>List of acceptable human languages for response</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '29', 29)" onmouseover="showTip(event, '29', 29)">
+            Allow methods
+          </code>
+          <div class="tip" id="29">
+            <strong>Signature:</strong> methods:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The Allow header, which specifies the set of HTTP methods supported.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '30', 30)" onmouseover="showTip(event, '30', 30)">
+            Authorization credentials
+          </code>
+          <div class="tip" id="30">
+            <strong>Signature:</strong> credentials:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Authentication credentials for HTTP authentication</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '31', 31)" onmouseover="showTip(event, '31', 31)">
+            CacheControl control
+          </code>
+          <div class="tip" id="31">
+            <strong>Signature:</strong> control:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Used to specify directives that MUST be obeyed by all caching mechanisms along the request/response chain</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '32', 32)" onmouseover="showTip(event, '32', 32)">
+            Connection connection
+          </code>
+          <div class="tip" id="32">
+            <strong>Signature:</strong> connection:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>What type of connection the user-agent would prefer</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '33', 33)" onmouseover="showTip(event, '33', 33)">
+            ContentEncoding encoding
+          </code>
+          <div class="tip" id="33">
+            <strong>Signature:</strong> encoding:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The type of encoding used on the data</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '34', 34)" onmouseover="showTip(event, '34', 34)">
+            ContentLanguage language
+          </code>
+          <div class="tip" id="34">
+            <strong>Signature:</strong> language:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The language the content is in</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '35', 35)" onmouseover="showTip(event, '35', 35)">
+            ContentLocation location
+          </code>
+          <div class="tip" id="35">
+            <strong>Signature:</strong> location:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>An alternate location for the returned data</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '36', 36)" onmouseover="showTip(event, '36', 36)">
+            ContentMD5 md5sum
+          </code>
+          <div class="tip" id="36">
+            <strong>Signature:</strong> md5sum:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>A Base64-encoded binary MD5 sum of the content of the request body</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '37', 37)" onmouseover="showTip(event, '37', 37)">
+            ContentRange range
+          </code>
+          <div class="tip" id="37">
+            <strong>Signature:</strong> range:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Where in a full body message this partial message belongs</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '38', 38)" onmouseover="showTip(event, '38', 38)">
+            ContentType contentType
+          </code>
+          <div class="tip" id="38">
+            <strong>Signature:</strong> contentType:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The MIME type of the body of the request (used with POST and PUT requests)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '39', 39)" onmouseover="showTip(event, '39', 39)">
+            Date date
+          </code>
+          <div class="tip" id="39">
+            <strong>Signature:</strong> date:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The date and time that the message was sent</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '40', 40)" onmouseover="showTip(event, '40', 40)">
+            Expect behaviors
+          </code>
+          <div class="tip" id="40">
+            <strong>Signature:</strong> behaviors:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Indicates that particular server behaviors are required by the client</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '41', 41)" onmouseover="showTip(event, '41', 41)">
+            Expires dateTime
+          </code>
+          <div class="tip" id="41">
+            <strong>Signature:</strong> dateTime:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Gives the date/time after which the response is considered stale</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '42', 42)" onmouseover="showTip(event, '42', 42)">
+            From email
+          </code>
+          <div class="tip" id="42">
+            <strong>Signature:</strong> email:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The email address of the user making the request</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '43', 43)" onmouseover="showTip(event, '43', 43)">
+            Host host
+          </code>
+          <div class="tip" id="43">
+            <strong>Signature:</strong> host:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The domain name of the server (for virtual hosting), and the TCP port number on which the server is listening. 
+The port number may be omitted if the port is the standard port for the service requested.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '44', 44)" onmouseover="showTip(event, '44', 44)">
+            IfMatch entity
+          </code>
+          <div class="tip" id="44">
+            <strong>Signature:</strong> entity:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Only perform the action if the client supplied entity matches the same entity on the server. 
+This is mainly for methods like PUT to only update a resource if it has not been modified since the user last updated it. If-Match: "737060cd8c284d8af7ad3082f209582d" Permanent</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '45', 45)" onmouseover="showTip(event, '45', 45)">
+            IfModifiedSince dateTime
+          </code>
+          <div class="tip" id="45">
+            <strong>Signature:</strong> dateTime:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Allows a 304 Not Modified to be returned if content is unchanged</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '46', 46)" onmouseover="showTip(event, '46', 46)">
+            IfNoneMatch etag
+          </code>
+          <div class="tip" id="46">
+            <strong>Signature:</strong> etag:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Allows a 304 Not Modified to be returned if content is unchanged</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '47', 47)" onmouseover="showTip(event, '47', 47)">
+            IfRange range
+          </code>
+          <div class="tip" id="47">
+            <strong>Signature:</strong> range:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '48', 48)" onmouseover="showTip(event, '48', 48)">
+            IfUnmodifiedSince dateTime
+          </code>
+          <div class="tip" id="48">
+            <strong>Signature:</strong> dateTime:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Only send the response if the entity has not been modified since a specific time</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '49', 49)" onmouseover="showTip(event, '49', 49)">
+            KeepAlive keepAlive
+          </code>
+          <div class="tip" id="49">
+            <strong>Signature:</strong> keepAlive:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Specifies a parameter used into order to maintain a persistent connection</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '50', 50)" onmouseover="showTip(event, '50', 50)">
+            LastModified dateTime
+          </code>
+          <div class="tip" id="50">
+            <strong>Signature:</strong> dateTime:DateTime -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Specifies the date and time at which the accompanying body data was last modified</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '51', 51)" onmouseover="showTip(event, '51', 51)">
+            MaxForwards count
+          </code>
+          <div class="tip" id="51">
+            <strong>Signature:</strong> count:int -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Limit the number of times the message can be forwarded through proxies or gateways</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '52', 52)" onmouseover="showTip(event, '52', 52)">
+            Origin origin
+          </code>
+          <div class="tip" id="52">
+            <strong>Signature:</strong> origin:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Initiates a request for cross-origin resource sharing (asks server for an 'Access-Control-Allow-Origin' response header)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '53', 53)" onmouseover="showTip(event, '53', 53)">
+            Pragma pragma
+          </code>
+          <div class="tip" id="53">
+            <strong>Signature:</strong> pragma:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Implementation-specific headers that may have various effects anywhere along the request-response chain.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '54', 54)" onmouseover="showTip(event, '54', 54)">
+            ProxyAuthorization credentials
+          </code>
+          <div class="tip" id="54">
+            <strong>Signature:</strong> credentials:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Authorization credentials for connecting to a proxy.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '55', 55)" onmouseover="showTip(event, '55', 55)">
+            Range (start, finish)
+          </code>
+          <div class="tip" id="55">
+            <strong>Signature:</strong> (start:int64 * finish:int64) -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Request only part of an entity. Bytes are numbered from 0</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '56', 56)" onmouseover="showTip(event, '56', 56)">
+            Referer referer
+          </code>
+          <div class="tip" id="56">
+            <strong>Signature:</strong> referer:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>This is the address of the previous web page from which a link to the currently requested page was followed. (The word "referrer" is misspelled in the RFC as well as in most implementations.)</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '57', 57)" onmouseover="showTip(event, '57', 57)">
+            TE te
+          </code>
+          <div class="tip" id="57">
+            <strong>Signature:</strong> te:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The transfer encodings the user agent is willing to accept: the same values as for the response header 
+Transfer-Encoding can be used, plus the "trailers" value (related to the "chunked" transfer method) to 
+notify the server it expects to receive additional headers (the trailers) after the last, zero-sized, chunk.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '58', 58)" onmouseover="showTip(event, '58', 58)">
+            Trailer trailer
+          </code>
+          <div class="tip" id="58">
+            <strong>Signature:</strong> trailer:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '59', 59)" onmouseover="showTip(event, '59', 59)">
+            Translate translate
+          </code>
+          <div class="tip" id="59">
+            <strong>Signature:</strong> translate:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Microsoft extension to the HTTP specification used in conjunction with WebDAV functionality.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '60', 60)" onmouseover="showTip(event, '60', 60)">
+            Upgrade upgrade
+          </code>
+          <div class="tip" id="60">
+            <strong>Signature:</strong> upgrade:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Specifies additional communications protocols that the client supports.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '61', 61)" onmouseover="showTip(event, '61', 61)">
+            UserAgent userAgent
+          </code>
+          <div class="tip" id="61">
+            <strong>Signature:</strong> userAgent:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>The user agent string of the user agent</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '62', 62)" onmouseover="showTip(event, '62', 62)">
+            Via server
+          </code>
+          <div class="tip" id="62">
+            <strong>Signature:</strong> server:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Informs the server of proxies through which the request was sent</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '63', 63)" onmouseover="showTip(event, '63', 63)">
+            Warning message
+          </code>
+          <div class="tip" id="63">
+            <strong>Signature:</strong> message:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>A general warning about possible problems with the entity body</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '64', 64)" onmouseover="showTip(event, '64', 64)">
+            XHTTPMethodOverride httpMethod
+          </code>
+          <div class="tip" id="64">
+            <strong>Signature:</strong> httpMethod:string -&gt; string * string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Override HTTP method.</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <a href="/ApiaryProvider/index.html">
+            <img src="/ApiaryProvider/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">Apiary Provider</li>
+            <li class="divider"></li>
+            <li><a href="https://nuget.org/packages/ApiaryProvider">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">License (Apache 2.0)</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="/ApiaryProvider/contributing.html">Contributing to Apiary Provider</a></li>
+            
+            <li class="nav-header">Apiary Provider Library</li>
+            <li><a href="/ApiaryProvider">Introduction</a></li>
+            <li><a href="/ApiaryProvider/library/ApiaryProvider.html">Apiary Type Provider</a></li>
+
+            <li class="nav-header">Reference</li>
+            <li><a href="/ApiaryProvider/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/ApiaryProvider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>

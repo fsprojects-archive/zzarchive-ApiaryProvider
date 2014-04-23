@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>JsonValue - Apiary Provider</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Tomas Petricek; Gustavo Guerra">
+
+    <script src="http://code.jquery.com/jquery-1.8.0.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.23/jquery-ui.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="/ApiaryProvider/content/style.css" />
+    <script type="text/javascript" src="/ApiaryProvider/content/tips.js"></script>
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="http://fsharp.org">fsharp.org</a></li>
+          <li><a href="http://fsharp.github.io/FSharp.Data/"><img height="16" width="16" src="http://fsharp.org/images/thumbs/FSharp.Data.png"/> F# Data</a></li>
+        </ul>
+        <h3 class="muted"><a href="/ApiaryProvider/index.html">Apiary Provider</a> <a href="/ApiaryProvider/ja/index.html">(Ja)</a></h3>
+      </div>
+      <hr />
+      <div class="row">
+        <div class="span9" id="main">
+          
+
+
+
+<h1>JsonValue</h1>
+<div class="xmldoc">
+<p>Represents a JSON value. Large numbers that do not fit in the 
+Decimal type are represented using the Float case, while
+smaller numbers are represented as decimals to avoid precision loss.</p>
+</div>
+  <h3>Union Cases</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Union Case</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '207', 207)" onmouseover="showTip(event, '207', 207)">
+            Array(elements)
+          </code>
+          <div class="tip" id="207">
+            <strong>Signature:</strong> JsonValue []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '208', 208)" onmouseover="showTip(event, '208', 208)">
+            Boolean(bool)
+          </code>
+          <div class="tip" id="208">
+            <strong>Signature:</strong> bool<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '209', 209)" onmouseover="showTip(event, '209', 209)">
+            Float(float)
+          </code>
+          <div class="tip" id="209">
+            <strong>Signature:</strong> float<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '210', 210)" onmouseover="showTip(event, '210', 210)">
+            Null
+          </code>
+          <div class="tip" id="210">
+            <strong>Signature:</strong> <br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '211', 211)" onmouseover="showTip(event, '211', 211)">
+            Number(decimal)
+          </code>
+          <div class="tip" id="211">
+            <strong>Signature:</strong> decimal<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '212', 212)" onmouseover="showTip(event, '212', 212)">
+            Record(properties)
+          </code>
+          <div class="tip" id="212">
+            <strong>Signature:</strong> (string * JsonValue) []<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '213', 213)" onmouseover="showTip(event, '213', 213)">
+            String(string)
+          </code>
+          <div class="tip" id="213">
+            <strong>Signature:</strong> string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Instance members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Instance member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '263', 263)" onmouseover="showTip(event, '263', 263)">
+            Post(uri, ?headers)
+          </code>
+          <div class="tip" id="263">
+            <strong>Signature:</strong> (uri:string * headers:(string * string) list option) -&gt; HttpResponse<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '264', 264)" onmouseover="showTip(event, '264', 264)">
+            Request(uri, ?httpMethod, ?headers)
+          </code>
+          <div class="tip" id="264">
+            <strong>Signature:</strong> (uri:string * httpMethod:string option * headers:(string * string) list option) -&gt; HttpResponse<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Sends the JSON to the specified uri. Defaults to a POST request.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '265', 265)" onmouseover="showTip(event, '265', 265)">
+            RequestAsync(uri, ?httpMethod, ?headers)
+          </code>
+          <div class="tip" id="265">
+            <strong>Signature:</strong> (uri:string * httpMethod:string option * headers:(string * string) list option) -&gt; Async&lt;HttpResponse&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Sends the JSON to the specified uri. Defaults to a POST request.</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '266', 266)" onmouseover="showTip(event, '266', 266)">
+            ToString(saveOptions)
+          </code>
+          <div class="tip" id="266">
+            <strong>Signature:</strong> saveOptions:JsonSaveOptions -&gt; string<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Static members</h3>
+  <table class="table table-bordered member-list">
+    <thead>
+      <tr><td>Static member</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '298', 298)" onmouseover="showTip(event, '298', 298)">
+            AsyncLoad(uri, ?cultureInfo)
+          </code>
+          <div class="tip" id="298">
+            <strong>Signature:</strong> (uri:string * cultureInfo:CultureInfo option) -&gt; Async&lt;JsonValue&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads JSON from the specified uri asynchronously</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '299', 299)" onmouseover="showTip(event, '299', 299)">
+            Load(uri, ?cultureInfo)
+          </code>
+          <div class="tip" id="299">
+            <strong>Signature:</strong> (uri:string * cultureInfo:CultureInfo option) -&gt; JsonValue<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads JSON from the specified uri</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '300', 300)" onmouseover="showTip(event, '300', 300)">
+            Load(reader, ?cultureInfo)
+          </code>
+          <div class="tip" id="300">
+            <strong>Signature:</strong> (reader:TextReader * cultureInfo:CultureInfo option) -&gt; JsonValue<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads JSON from the specified reader</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '301', 301)" onmouseover="showTip(event, '301', 301)">
+            Load(stream, ?cultureInfo)
+          </code>
+          <div class="tip" id="301">
+            <strong>Signature:</strong> (stream:Stream * cultureInfo:CultureInfo option) -&gt; JsonValue<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Loads JSON from the specified stream</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '302', 302)" onmouseover="showTip(event, '302', 302)">
+            Parse(text, ?cultureInfo)
+          </code>
+          <div class="tip" id="302">
+            <strong>Signature:</strong> (text:string * cultureInfo:CultureInfo option) -&gt; JsonValue<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Parses the specified JSON string</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '303', 303)" onmouseover="showTip(event, '303', 303)">
+            ParseMultiple(text, ?cultureInfo)
+          </code>
+          <div class="tip" id="303">
+            <strong>Signature:</strong> (text:string * cultureInfo:CultureInfo option) -&gt; seq&lt;JsonValue&gt;<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Parses the specified string into multiple JSON values</p>
+
+        </td>
+      </tr>
+      <tr>
+        <td class="member-name">
+
+          <code onmouseout="hideTip(event, '304', 304)" onmouseover="showTip(event, '304', 304)">
+            ParseSample(text, ?cultureInfo)
+          </code>
+          <div class="tip" id="304">
+            <strong>Signature:</strong> (text:string * cultureInfo:CultureInfo option) -&gt; JsonValue<br />
+                      </div>
+        </td>
+        <td class="xmldoc">
+          <p>Parses the specified JSON string, tolerating invalid errors like trailing commans, and ignore content with elipsis ... or {...}</p>
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+        </div>
+        <div class="span3">
+          <a href="/ApiaryProvider/index.html">
+            <img src="/ApiaryProvider/images/logo.png" style="width:140px;height:140px;margin:10px 0px 0px 35px;border-style:none;" />
+          </a>
+
+          <ul class="nav nav-list" id="menu">
+            <li class="nav-header">Apiary Provider</li>
+            <li class="divider"></li>
+            <li><a href="https://nuget.org/packages/ApiaryProvider">Get Library via NuGet</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider">Source Code on GitHub</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md">License (Apache 2.0)</a></li>
+            <li><a href="http://github.com/fsprojects/ApiaryProvider/blob/master/RELEASE_NOTES.md">Release Notes</a></li>
+            <li><a href="/ApiaryProvider/contributing.html">Contributing to Apiary Provider</a></li>
+            
+            <li class="nav-header">Apiary Provider Library</li>
+            <li><a href="/ApiaryProvider">Introduction</a></li>
+            <li><a href="/ApiaryProvider/library/ApiaryProvider.html">Apiary Type Provider</a></li>
+
+            <li class="nav-header">Reference</li>
+            <li><a href="/ApiaryProvider/reference/index.html">API Reference</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <a href="http://github.com/fsprojects/ApiaryProvider"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  </body>
+  </html>
