@@ -1,7 +1,7 @@
 (** 
-# Apiary Provider: Apiary Type Provider (Experimental)
+# Apiary Type Provider
 
-In this article, we look at an experimental type provider that makes it possible to
+In this article, we look at a type provider that makes it possible to
 easily call REST services that are documented using the [apiary.io](http://www.apiary.io/)
 service. The Apiary.io service lets you document your REST API by writing an API
 _blueprint_ in a simple Markdown-like language. 
@@ -28,9 +28,6 @@ It also re-uses the JSON inference from [JSON Type Provider](../library/JsonProv
 the result type from the sample responses.
 
 ## Introducing the provider
-
-The type provider is experimental and will not work for all APIs hosted on Apiary.io and
-so it is located in `ApiaryProvider.dll`:
 
 *)
 
@@ -152,8 +149,7 @@ snip.Tags
 
 ## Summary
 
-This article demonstrated the `ApiaryProvider` type from the experimental extensions to 
-Apiary Provider. The provider infers structure of a REST API from a documentation obtained from 
+This article demonstrated the `ApiaryProvider` type. The provider infers structure of a REST API from a documentation obtained from 
 [apiary.io](http://apiary.io) and exposes it in a nice typed way to F# programmers.
 
 At the moment, the type provider is only experimental - it may work for your API or it
