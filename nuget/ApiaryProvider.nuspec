@@ -2,17 +2,17 @@
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <id>@project@</id>
+    <title>Apiary Provider</title>
     <version>@build.number@</version>
     <authors>@authors@</authors>
     <owners>@authors@</owners>
-    <licenseUrl>http://github.com/fsharp/FSharp.Data/blob/master/LICENSE.md</licenseUrl>
-    <projectUrl>http://fsharp.github.com/FSharp.Data</projectUrl>
-    <iconUrl>https://raw.github.com/fsharp/FSharp.Data/master/misc/logo.png</iconUrl>
+    <licenseUrl>http://github.com/fsprojects/ApiaryProvider/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>http://fsprojects.github.io/ApiaryProvider</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>@summary@</summary>
     <description>@description@</description>
     <releaseNotes>@releaseNotes@</releaseNotes>
-    <copyright>Copyright 2013</copyright>
+    <copyright>Copyright 2014</copyright>
     <tags>@tags@</tags>
     <dependencies>
       <group targetFramework="portable-net40+sl5+wp8+win8">
