@@ -4,7 +4,7 @@
 // --------------------------------------------------------------------------------------
 
 // Binaries that have XML documentation (in a corresponding generated XML file)
-let referenceBinaries = [ "ApiaryProvider.dll"; "FSharp.Data.dll" ]
+let referenceBinaries = [ "ApiaryProvider.dll" ]
 // Web site location for the generated documentation
 let repo = "https://github.com/fsprojects/ApiaryProvider/tree/master/"
 let website = "/ApiaryProvider"
@@ -71,10 +71,12 @@ let buildReference () =
   CleanDir (output @@ "reference")
   MetadataFormat.Generate
     ( referenceBinaries |> List.map ((@@) bin),
-      output @@ "reference", layoutRoots, 
+      output @@ "reference", 
+      layoutRoots, 
       parameters = ("root", root)::info,
       sourceRepo = repo,
-      sourceFolder = __SOURCE_DIRECTORY__ @@ ".." @@ "..")
+      sourceFolder = __SOURCE_DIRECTORY__ @@ ".." @@ "..",
+      libDirs = [bin])
 
 // Build documentation from `fsx` and `md` files in `docs/content`
 let buildDocumentation () =
