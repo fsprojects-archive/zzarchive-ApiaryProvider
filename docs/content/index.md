@@ -54,8 +54,6 @@ contribute [samples][samples] that can be turned into a documentation.
    then you can submit [an issue or feature request][issues] via Github or you can 
    send an email to the [F# open source][fsharp-oss] mailing list.
 
- * For more information about the library architecture, organization, how to debug, etc., see the [contributing to Apiary Provider](contributing.html) page.
-
   [source]: https://github.com/fsprojects/ApiaryProvider/zipball/master
   [compiled]: https://github.com/fsprojects/ApiaryProvider/zipball/release
   [samples]: https://github.com/fsprojects/ApiaryProvider/tree/master/docs/content

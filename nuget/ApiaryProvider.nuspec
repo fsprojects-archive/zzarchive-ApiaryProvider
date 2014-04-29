@@ -16,15 +16,11 @@
     <tags>@tags@</tags>
     <dependencies>
       <group targetFramework="portable-net40+sl5+wp8+win8">
-        <dependency id="FSharp.Data" version="2.0.6" />
-        <dependency id="Zlib.Portable" version="1.9.2" />
-      </group>
-      <group targetFramework="portable-net45+win8">
-        <dependency id="FSharp.Data" version="2.0.6" />
+        <dependency id="FSharp.Data" version="2.0.7" />
         <dependency id="Zlib.Portable" version="1.9.2" />
       </group>
       <group targetFramework="net40">
-        <dependency id="FSharp.Data" version="2.0.6" />
+        <dependency id="FSharp.Data" version="2.0.7" />
       </group>
     </dependencies>
     <references>
@@ -50,14 +46,5 @@
     <file src="..\bin\portable47\FSharp.Data.DesignTime.dll" target="lib/portable-net40+sl5+wp8+win8" />
     <file src="..\bin\portable47\FSharp.Data.DesignTime.pdb" target="lib/portable-net40+sl5+wp8+win8" />
     <file src="..\bin\portable47\FSharp.Data.DesignTime.xml" target="lib/portable-net40+sl5+wp8+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.dll" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.pdb" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.xml" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.DesignTime.dll" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.DesignTime.pdb" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\ApiaryProvider.DesignTime.xml" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\FSharp.Data.DesignTime.dll" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\FSharp.Data.DesignTime.pdb" target="lib/portable-net45+win8" />
-    <file src="..\bin\portable7\FSharp.Data.DesignTime.xml" target="lib/portable-net45+win8" />
   </files>
 </package>

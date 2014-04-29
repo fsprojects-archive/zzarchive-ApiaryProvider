@@ -152,9 +152,4 @@ snip.Tags
 This article demonstrated the `ApiaryProvider` type. The provider infers structure of a REST API from a documentation obtained from 
 [apiary.io](http://apiary.io) and exposes it in a nice typed way to F# programmers.
 
-At the moment, the type provider is only experimental - it may work for your API or it
-may not. If you're interested in making the provider better, or in supporting other 
-REST API documentation formats, then please visit [Contributing to Apiary Provider](../contributing.html)
-page!
-
 *)

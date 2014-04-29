@@ -167,12 +167,6 @@ snip.Tags
 REST APIの構造を推測して公開するため、F#プログラマは型付けされた方法で
 データを処理できるようになります。
 
-現時点ではこの型プロバイダーだけが試験用とされています。
-このプロバイダーは自身のAPIで機能するかもしれませんし、しないかもしれません。
-もしもプロバイダーの改善に興味がある、あるいはその他のREST APIドキュメント形式を
-サポートできるようにしたいと思う場合には、是非
-[Apiary Providerに貢献する](../contributing.html) のページを参照してください！
-
 ## 関連する記事
 
  * [Apiary Provider: XML Type Provider](../library/XmlProvider.html) -

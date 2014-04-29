@@ -33,7 +33,7 @@ type internal ApiaryGenerationContext =
       Replacer = replacer 
       UniqueNiceName = uniqueNiceName
       ApiaryContextSelector = fun e -> <@ (%%e:ApiaryContext) :> InternalApiaryContext @> 
-      JsonContext = JsonGenerationContext.Create("", tpType, typeof<ApiaryDocument>, replacer, uniqueNiceName, Dictionary(), false) 
+      JsonContext = JsonGenerationContext.Create("", tpType, replacer, uniqueNiceName, Dictionary(), false) 
       SpecialNames = specialNames } 
 
 module internal ApiaryTypeBuilder = 

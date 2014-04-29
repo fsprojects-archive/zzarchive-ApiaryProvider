@@ -56,11 +56,9 @@ Target "AssemblyInfo" <| fun () ->
         let title = 
             Path.GetFileNameWithoutExtension file
             |> replace ".Portable47" ""
-            |> replace ".Portable7" ""
             |> replace "AssemblyInfo" "ApiaryProvider"
         let versionSuffix =
             if file.Contains ".Portable47" then ".47"
-            elif file.Contains ".Portable7" then ".7"
             else ".0"
         let version = release.AssemblyVersion + versionSuffix
         CreateFSharpAssemblyInfo file
@@ -140,8 +138,6 @@ Target "SourceLink" <| fun () ->
         proj.CreateSrcSrv (sprintf "%s/%s/{0}/%%var2%%" gitRaw gitName) repo.Revision (repo.Paths files)
         Pdbstr.exec proj.OutputFilePdb proj.OutputFilePdbSrcSrv
     CopyFiles "bin" (!! "src/bin/Release/ApiaryProvider.*")
-    CopyFiles "bin/portable7" (!! "src/bin/portable7/Release/ApiaryProvider.*")
-    CopyFiles "bin/portable7" (!! "src/bin/Release/fsprojects.*.DesignTime.*")
     CopyFiles "bin/portable47" (!! "src/bin/portable47/Release/ApiaryProvider.*")    
     CopyFiles "bin/portable47" (!! "src/bin/Release/fsprojects.*.DesignTime.*")
 

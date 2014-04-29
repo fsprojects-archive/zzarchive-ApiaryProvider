@@ -54,7 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data.DesignTime">
-      <HintPath>..\packages\FSharp.Data.2.0.6\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
+      <HintPath>..\packages\FSharp.Data.2.0.7\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
@@ -84,12 +84,6 @@
     <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.dll" DestinationFolder="$(ProjectDir)..\bin\portable47" />
     <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.pdb" DestinationFolder="$(ProjectDir)..\bin\portable47" />
     <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.xml" DestinationFolder="$(ProjectDir)..\bin\portable47" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName)$(TargetExt)" DestinationFolder="$(ProjectDir)..\bin\portable7" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)..\bin\portable7" Condition="Exists('$(ProjectDir)$(OutDir)$(TargetName).pdb')" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName).xml" DestinationFolder="$(ProjectDir)..\bin\portable7" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.dll" DestinationFolder="$(ProjectDir)..\bin\portable7" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.pdb" DestinationFolder="$(ProjectDir)..\bin\portable7" />
-    <Copy SourceFiles="$(ProjectDir)$(OutDir)FSharp.Data.DesignTime.xml" DestinationFolder="$(ProjectDir)..\bin\portable7" />
     <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName)$(TargetExt)" DestinationFolder="$(ProjectDir)..\bin" />
     <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName).pdb" DestinationFolder="$(ProjectDir)..\bin" Condition="Exists('$(ProjectDir)$(OutDir)$(TargetName).pdb')" />
     <Copy SourceFiles="$(ProjectDir)$(OutDir)$(TargetName).xml" DestinationFolder="$(ProjectDir)..\bin" />

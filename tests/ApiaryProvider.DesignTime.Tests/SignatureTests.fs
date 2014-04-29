@@ -27,7 +27,6 @@ let resolutionFolder = ""
 let assemblyName = "ApiaryProvider.dll"
 let runtimeAssembly = sourceDirectory ++ ".." ++ ".." ++ "bin" ++ assemblyName
 let portable47RuntimeAssembly = sourceDirectory ++ ".." ++ ".." ++ "bin" ++ "portable47" ++ assemblyName
-let portable7RuntimeAssembly = sourceDirectory ++ ".." ++ ".." ++ "bin" ++ "portable7" ++ assemblyName
 
 let generateAllExpected() =
     if not <| Directory.Exists expectedDirectory then 
@@ -52,9 +51,3 @@ let ``Validate signature didn't change `` (testCase:TypeProviderInstantiation) =
 [<TestCaseSource "testCases">]
 let ``Generating expressions works in portable profile 47 `` (testCase:TypeProviderInstantiation) = 
     testCase.Dump resolutionFolder "" portable47RuntimeAssembly (*signatureOnly*)false (*ignoreOutput*)true |> ignore
-
-[<Test>]
-[<TestCaseSource "testCases">]
-[<Platform "Net">]
-let ``Generating expressions works in portable profile 7 `` (testCase:TypeProviderInstantiation) = 
-    testCase.Dump resolutionFolder "" portable7RuntimeAssembly (*signatureOnly*)false (*ignoreOutput*)true |> ignore

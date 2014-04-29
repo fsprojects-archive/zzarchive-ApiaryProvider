@@ -39,7 +39,7 @@ type ApiaryDocument private (json:JsonValue, path:string, context:InternalApiary
 
   interface IJsonDocument with 
     member x.JsonValue = x.Json
-    member x.Path = x.Path
+    member x.Path() = x.Path
     member x.CreateNew(json, pathIncrement) = upcast ApiaryDocument(json, x.Path + pathIncrement)
 
   [<EditorBrowsableAttribute(EditorBrowsableState.Never)>]

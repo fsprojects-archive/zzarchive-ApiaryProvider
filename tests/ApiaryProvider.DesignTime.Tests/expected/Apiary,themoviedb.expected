@@ -207,7 +207,7 @@ class ApiaryProvider+Company : ApiaryProvider.Runtime.InternalApiaryContext
 
 class ApiaryProvider+Configuration : FDR.IJsonDocument
     member ChangeKeys: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "change_keys"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "change_keys"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Images: ApiaryProvider+Images with get
     JsonRuntime.GetPropertyPacked(this, "images")
@@ -1590,27 +1590,27 @@ class ApiaryProvider+Id : ApiaryProvider.Runtime.InternalApiaryContext
 
 class ApiaryProvider+Images : FDR.IJsonDocument
     member BackdropSizes: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "backdrop_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "backdrop_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member BaseUrl: string with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "base_url")
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertString("", value.JsonOpt), value.JsonOpt)
 
     member LogoSizes: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "logo_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "logo_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member PosterSizes: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "poster_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "poster_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member ProfileSizes: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "profile_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "profile_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member SecureBaseUrl: string with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "secure_base_url")
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertString("", value.JsonOpt), value.JsonOpt)
 
     member StillSizes: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "still_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "still_sizes"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
 
 class ApiaryProvider+JobList : FDR.IJsonDocument
@@ -2875,751 +2875,751 @@ class ApiaryProvider+Session : ApiaryProvider.Runtime.InternalApiaryContext
 
 class ApiaryProvider+TimezonesList : FDR.IJsonDocument
     member Ad: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ae: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Af: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ag: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ai: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Al: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Am: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ao: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Aq: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ar: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member As: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member At: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Au: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Aw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ax: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Az: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "AZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ba: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bb: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bd: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Be: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bi: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bj: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bo: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bq: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Br: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bs: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bv: FDR.IJsonDocument[] with get
     JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BV"), new Func<_,_>(id)))
 
     member Bw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member By: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Bz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "BZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ca: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cd: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ch: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ci: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ck: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Co: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cv: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cx: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cy: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Cz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "CZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member De: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Dj: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Dk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Dm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Do: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Dz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "DZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ec: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ee: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Eg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Eh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "EH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Er: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ER"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ER"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Es: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ES"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ES"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Et: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ET"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ET"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fi: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fj: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fo: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Fr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "FR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ga: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gb: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gd: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ge: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gi: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gp: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gq: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gs: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Gy: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "GY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Hk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Hm: FDR.IJsonDocument[] with get
     JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HM"), new Func<_,_>(id)))
 
     member Hn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Hr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ht: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Hu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "HU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Id: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ID"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ID"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ie: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Il: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Im: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member In: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Io: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Iq: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ir: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Is: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member It: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "IT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Je: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Jm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Jo: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Jp: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "JP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ke: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ki: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Km: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kp: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ky: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Kz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "KZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member La: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lb: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Li: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ls: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Lv: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ly: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "LY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ma: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Md: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Me: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ME"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ME"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ml: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ML"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ML"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mo: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mp: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mq: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MQ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ms: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mv: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mx: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member My: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Mz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "MZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Na: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ne: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ng: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ni: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member No: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Np: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NP"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Nz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "NZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Om: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "OM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "OM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pa: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pe: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ph: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ps: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Pw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Py: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "PY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Qa: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "QA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "QA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Re: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ro: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Rs: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ru: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Rw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "RW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sa: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sb: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SB"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sd: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Se: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sh: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Si: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sj: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member So: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ss: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member St: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ST"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ST"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sv: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sx: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SX"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sy: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Sz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "SZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Td: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TD"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Th: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TH"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tj: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TJ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tk: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TK"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tl: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TL"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member To: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TO"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tr: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TR"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tv: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TV"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Tz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "TZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ua: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ug: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Um: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Us: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "US"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "US"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Uy: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UY"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Uz: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "UZ"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Va: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Vc: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VC"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ve: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Vg: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VG"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Vi: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VI"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Vn: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VN"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Vu: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "VU"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Wf: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "WF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "WF"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ws: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "WS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "WS"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Ye: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "YE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "YE"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Yt: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "YT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "YT"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Za: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZA"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Zm: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZM"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member Zw: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "ZW"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
 
 class ApiaryProvider+Token : ApiaryProvider.Runtime.InternalApiaryContext
@@ -3728,6 +3728,22 @@ class ApiaryProvider+Tv2 : FDR.IJsonDocument
                          let apiCtx, args = patternInput
                          apiCtx.AsyncInvokeOperation(args), f)
 
+    member AsyncRating: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieRating async
+    let f = new Func<_,_>(id))
+    TextRuntime.AsyncMap(let patternInput = 
+                             let patternInput = ApiaryRuntime.ProcessParameters("Content-Type:application/json
+Accept:application/json", headers, query)
+                             let headers, query = patternInput
+                             let apiCtx = LanguagePrimitives+IntrinsicFunctions.UnboxGeneric(this).Context
+                             (apiCtx :> ApiaryOperations),
+                             { Method = "POST"
+                               Path = "/3/tv/{id}/rating"
+                               Arguments = [| |]
+                               Headers = headers
+                               Query = query }
+                         let apiCtx, args = patternInput
+                         apiCtx.AsyncInvokeOperation(args), f)
+
     member AsyncTranslations: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieTranslations async
     let f = new Func<_,_>(id))
     TextRuntime.AsyncMap(let patternInput = 
@@ -3780,7 +3796,7 @@ class ApiaryProvider+Tv2 : FDR.IJsonDocument
     apiCtx.InvokeOperation(args)
 
     member EpisodeRunTime: int[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "episode_run_time"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "episode_run_time"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
 
     member ExternalIds: query:string * string list -> headers:string * string list -> ApiaryProvider+TvExternalIds
     let patternInput = 
@@ -3830,7 +3846,7 @@ class ApiaryProvider+Tv2 : FDR.IJsonDocument
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertBoolean("", value.JsonOpt), value.JsonOpt)
 
     member Languages: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "languages"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "languages"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member LastAirDate: System.DateTime with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "last_air_date")
@@ -3852,7 +3868,7 @@ class ApiaryProvider+Tv2 : FDR.IJsonDocument
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertInteger("", value.JsonOpt), value.JsonOpt)
 
     member OriginCountry: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "origin_country"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "origin_country"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
     member OriginalName: string with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "original_name")
@@ -3869,6 +3885,21 @@ class ApiaryProvider+Tv2 : FDR.IJsonDocument
     member PosterPath: string with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "poster_path")
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertString("", value.JsonOpt), value.JsonOpt)
+
+    member Rating: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieRating
+    let patternInput = 
+        let patternInput = ApiaryRuntime.ProcessParameters("Content-Type:application/json
+Accept:application/json", headers, query)
+        let headers, query = patternInput
+        let apiCtx = LanguagePrimitives+IntrinsicFunctions.UnboxGeneric(this).Context
+        (apiCtx :> ApiaryOperations),
+        { Method = "POST"
+          Path = "/3/tv/{id}/rating"
+          Arguments = [| |]
+          Headers = headers
+          Query = query }
+    let apiCtx, args = patternInput
+    apiCtx.InvokeOperation(args)
 
     member Season: ApiaryProvider+Season2 with get
     LanguagePrimitives+IntrinsicFunctions.UnboxGeneric(this).Context
@@ -4147,7 +4178,7 @@ class ApiaryProvider+Job2 : FDR.IJsonDocument
     JsonRuntime.GetNonOptionalValue(value.Path, JsonRuntime.ConvertString("", value.JsonOpt), value.JsonOpt)
 
     member JobList: string[] with get
-    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "job_list"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.ConvertArray(JsonRuntime.GetPropertyPackedOrNull(this, "job_list"), new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
 
 class ApiaryProvider+ListItemStatus : FDR.IJsonDocument
@@ -5475,10 +5506,10 @@ class ApiaryProvider+Episode : FDR.IJsonDocument
 
 class ApiaryProvider+IntOrString : FDR.IJsonDocument
     member Number: int option with get
-    JsonRuntime.TryGetValueByTypeTag(this, "", "Number", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.TryGetValueByTypeTag(this, "", "Number", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
 
     member String: string option with get
-    JsonRuntime.TryGetValueByTypeTag(this, "", "String", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.TryGetValueByTypeTag(this, "", "String", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
 
 class ApiaryProvider+Poster : FDR.IJsonDocument
@@ -6134,16 +6165,16 @@ class ApiaryProvider+TvSeasonSeasonImages : FDR.IJsonDocument
 
 class ApiaryProvider+IntOrBooleanOrStringOrValue : FDR.IJsonDocument
     member Boolean: bool option with get
-    JsonRuntime.TryGetValueByTypeTag(this, "", "Boolean", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertBoolean("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.TryGetValueByTypeTag(this, "", "Boolean", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertBoolean("", Some t.JsonValue), Some t.JsonValue)))
 
     member Number: int option with get
-    JsonRuntime.TryGetValueByTypeTag(this, "", "Number", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.TryGetValueByTypeTag(this, "", "Number", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertInteger("", Some t.JsonValue), Some t.JsonValue)))
 
     member Record: ApiaryProvider+Value option with get
     JsonRuntime.TryGetValueByTypeTag(this, "", "Record@value", new Func<_,_>(id)))
 
     member String: string option with get
-    JsonRuntime.TryGetValueByTypeTag(this, "", "String", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path, JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
+    JsonRuntime.TryGetValueByTypeTag(this, "", "String", new Func<_,_>(fun (t:IJsonDocument) -> JsonRuntime.GetNonOptionalValue(t.Path(), JsonRuntime.ConvertString("", Some t.JsonValue), Some t.JsonValue)))
 
 
 class ApiaryProvider+Poster4 : FDR.IJsonDocument
@@ -6225,6 +6256,22 @@ class ApiaryProvider+TvSeasonSeasonEpisodeEpisode : FDR.IJsonDocument
                          let apiCtx, args = patternInput
                          apiCtx.AsyncInvokeOperation(args), f)
 
+    member AsyncRating: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieRating async
+    let f = new Func<_,_>(id))
+    TextRuntime.AsyncMap(let patternInput = 
+                             let patternInput = ApiaryRuntime.ProcessParameters("Content-Type:application/json
+Accept:application/json", headers, query)
+                             let headers, query = patternInput
+                             let apiCtx = LanguagePrimitives+IntrinsicFunctions.UnboxGeneric(this).Context
+                             (apiCtx :> ApiaryOperations),
+                             { Method = "POST"
+                               Path = "/3/tv/{id}/season/{season_number}/episode/{episode_number}/rating"
+                               Arguments = [| |]
+                               Headers = headers
+                               Query = query }
+                         let apiCtx, args = patternInput
+                         apiCtx.AsyncInvokeOperation(args), f)
+
     member AsyncVideos: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieVideos async
     let f = new Func<_,_>(id))
     TextRuntime.AsyncMap(let patternInput = 
@@ -6300,6 +6347,21 @@ class ApiaryProvider+TvSeasonSeasonEpisodeEpisode : FDR.IJsonDocument
 
     member ProductionCode: FDR.IJsonDocument with get
     JsonRuntime.GetPropertyPackedOrNull(this, "production_code")
+
+    member Rating: query:string * string list -> headers:string * string list -> ApiaryProvider+MovieRating
+    let patternInput = 
+        let patternInput = ApiaryRuntime.ProcessParameters("Content-Type:application/json
+Accept:application/json", headers, query)
+        let headers, query = patternInput
+        let apiCtx = LanguagePrimitives+IntrinsicFunctions.UnboxGeneric(this).Context
+        (apiCtx :> ApiaryOperations),
+        { Method = "POST"
+          Path = "/3/tv/{id}/season/{season_number}/episode/{episode_number}/rating"
+          Arguments = [| |]
+          Headers = headers
+          Query = query }
+    let apiCtx, args = patternInput
+    apiCtx.InvokeOperation(args)
 
     member SeasonNumber: int with get
     let value = JsonRuntime.TryGetPropertyUnpackedWithPath(this, "season_number")

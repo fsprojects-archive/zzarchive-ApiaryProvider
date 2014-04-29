@@ -16,20 +16,18 @@ let resolutionFolder = ""
 let outputFolder = __SOURCE_DIRECTORY__ ++ ".." ++ "tests" ++ "ApiaryProvider.DesignTime.Tests" ++ "expected"
 let assemblyName = "ApiaryProvider.dll"
 
-type Platform = Net40 | Portable7 | Portable47
+type Platform = Net40 | Portable47
 
 let dump signatureOnly ignoreOutput platform saveToFileSystem (inst:TypeProviderInstantiation) =
     let runtimeAssembly = 
         match platform with
         | Net40 -> __SOURCE_DIRECTORY__ ++ ".." ++ "bin" ++ assemblyName
-        | Portable7 -> __SOURCE_DIRECTORY__ ++ ".." ++ "bin" ++ "portable7" ++ assemblyName
         | Portable47 -> __SOURCE_DIRECTORY__ ++ ".." ++ "bin" ++ "portable47" ++ assemblyName    
     inst.Dump resolutionFolder (if saveToFileSystem then outputFolder else "") runtimeAssembly signatureOnly ignoreOutput
     |> Console.WriteLine
 
 let dumpAll inst = 
     dump false false Net40 false inst
-    dump false false Portable7 false inst
     dump false false Portable47 false inst
 
 Apiary { ApiName = "themoviedb" }
