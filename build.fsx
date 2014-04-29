@@ -139,7 +139,7 @@ Target "SourceLink" <| fun () ->
         Pdbstr.exec proj.OutputFilePdb proj.OutputFilePdbSrcSrv
     CopyFiles "bin" (!! "src/bin/Release/ApiaryProvider.*")
     CopyFiles "bin/portable47" (!! "src/bin/portable47/Release/ApiaryProvider.*")    
-    CopyFiles "bin/portable47" (!! "src/bin/Release/fsprojects.*.DesignTime.*")
+    CopyFiles "bin/portable47" (!! "src/bin/Release/ApiaryProvider.DesignTime.*")
 
 #endif
 
