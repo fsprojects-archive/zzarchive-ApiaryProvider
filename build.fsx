@@ -69,7 +69,9 @@ Target "AssemblyInfo" <| fun () ->
              Attribute.FileVersion version]
 
 // --------------------------------------------------------------------------------------
-// Clean build results
+// Clean build results & restore NuGet packages
+
+Target "RestorePackages" RestorePackages
 
 Target "Clean" <| fun () ->
     CleanDirs ["bin"]
@@ -229,7 +231,7 @@ Target "Help" <| fun () ->
 
 Target "All" DoNothing
 
-"Clean" ==> "AssemblyInfo" ==> "Build"
+"Clean" ==> "RestorePackages"  ==> "AssemblyInfo" ==> "Build"
 "Build" ==> "All"
 "BuildTests" ==> "All"
 "RunTests" ==> "All"
