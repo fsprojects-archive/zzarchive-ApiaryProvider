@@ -1288,13 +1288,18 @@
 <member name="">
 
 </member>
-<member name="">
-
-</member>
 <member name="P:FSharp.Data.Runtime.JsonDocument.JsonValue">
 <summary>
  The underlying JsonValue
 </summary>
+</member>
+<member name="M:FSharp.Data.Runtime.JsonDocument.ToString">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="">
+
 </member>
 <member name="">
 
@@ -1377,14 +1382,18 @@
  Returns a single array children that matches the specified tag
 </summary>
 </member>
-<member name="">
-
+<member name="M:FSharp.Data.Runtime.JsonRuntime.CreateValue(System.Object,System.String)">
+<summary>
+ Creates a scalar JsonValue and wraps it in a json document
+</summary>
 </member>
 <member name="">
 
 </member>
-<member name="">
-
+<member name="M:FSharp.Data.Runtime.JsonRuntime.CreateArray(System.Object[],System.String)">
+<summary>
+ Creates a scalar JsonValue.Array and wraps it in a json document
+</summary>
 </member>
 <member name="">
 
@@ -1511,9 +1520,6 @@
  Turn a .NET type Nullable&lt;&apos;T&gt; to an F# option type Option&lt;&apos;T&gt;
 </summary>
 </member>
-<member name="">
-
-</member>
 <member name="M:FSharp.Data.Runtime.TextRuntime.GetNonOptionalValue``1(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{System.String})">
 <summary>
  Operation that extracts the value from an option and reports a meaningful error message when the value is not there
@@ -1596,6 +1602,11 @@
  [omit]
 </summary>
 </member>
+<member name="M:FSharp.Data.Runtime.XmlElement.ToString">
+<summary>
+ [omit]
+</summary>
+</member>
 <member name="M:FSharp.Data.Runtime.XmlElement.CreateList(System.IO.TextReader)">
 <summary>
  [omit]
@@ -1637,6 +1648,14 @@
 </member>
 <member name="">
 
+</member>
+<member name="">
+
+</member>
+<member name="M:FSharp.Data.Runtime.XmlRuntime.CreateValue(System.String,System.Object,System.String)">
+<summary>
+ Creates a XElement with a scalar value and wraps it in a XmlElement
+</summary>
 </member>
 <member name="">
 
@@ -3396,6 +3415,9 @@
  This matches the corresponding members and marks them as `Optional`
  if one may be missing. It also returns subtype of their types.
 </summary>
+</member>
+<member name="">
+
 </member>
 <member name="M:FSharp.Data.Runtime.StructuralInference.unionCollectionTypes(System.Boolean,Microsoft.FSharp.Collections.FSharpMap{FSharp.Data.Runtime.StructuralTypes.InferedTypeTag,System.Tuple{FSharp.Data.Runtime.StructuralTypes.InferedMultiplicity,FSharp.Data.Runtime.StructuralTypes.InferedType}},Microsoft.FSharp.Collections.FSharpMap{FSharp.Data.Runtime.StructuralTypes.InferedTypeTag,System.Tuple{FSharp.Data.Runtime.StructuralTypes.InferedMultiplicity,FSharp.Data.Runtime.StructuralTypes.InferedType}})">
 <summary>

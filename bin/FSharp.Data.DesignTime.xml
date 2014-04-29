@@ -1288,13 +1288,18 @@
 <member name="">
 
 </member>
-<member name="">
-
-</member>
 <member name="P:FSharp.Data.Runtime.JsonDocument.JsonValue">
 <summary>
  The underlying JsonValue
 </summary>
+</member>
+<member name="M:FSharp.Data.Runtime.JsonDocument.ToString">
+<summary>
+ [omit]
+</summary>
+</member>
+<member name="">
+
 </member>
 <member name="">
 
@@ -1377,14 +1382,18 @@
  Returns a single array children that matches the specified tag
 </summary>
 </member>
-<member name="">
-
+<member name="M:FSharp.Data.Runtime.JsonRuntime.CreateValue(System.Object,System.String)">
+<summary>
+ Creates a scalar JsonValue and wraps it in a json document
+</summary>
 </member>
 <member name="">
 
 </member>
-<member name="">
-
+<member name="M:FSharp.Data.Runtime.JsonRuntime.CreateArray(System.Object[],System.String)">
+<summary>
+ Creates a scalar JsonValue.Array and wraps it in a json document
+</summary>
 </member>
 <member name="">
 
@@ -1511,9 +1520,6 @@
  Turn a .NET type Nullable&lt;&apos;T&gt; to an F# option type Option&lt;&apos;T&gt;
 </summary>
 </member>
-<member name="">
-
-</member>
 <member name="M:FSharp.Data.Runtime.TextRuntime.GetNonOptionalValue``1(System.String,Microsoft.FSharp.Core.FSharpOption{``0},Microsoft.FSharp.Core.FSharpOption{System.String})">
 <summary>
  Operation that extracts the value from an option and reports a meaningful error message when the value is not there
@@ -1596,6 +1602,11 @@
  [omit]
 </summary>
 </member>
+<member name="M:FSharp.Data.Runtime.XmlElement.ToString">
+<summary>
+ [omit]
+</summary>
+</member>
 <member name="M:FSharp.Data.Runtime.XmlElement.CreateList(System.IO.TextReader)">
 <summary>
  [omit]
@@ -1637,6 +1648,14 @@
 </member>
 <member name="">
 
+</member>
+<member name="">
+
+</member>
+<member name="M:FSharp.Data.Runtime.XmlRuntime.CreateValue(System.String,System.Object,System.String)">
+<summary>
+ Creates a XElement with a scalar value and wraps it in a XmlElement
+</summary>
 </member>
 <member name="">
 
@@ -3397,6 +3416,9 @@
  if one may be missing. It also returns subtype of their types.
 </summary>
 </member>
+<member name="">
+
+</member>
 <member name="M:FSharp.Data.Runtime.StructuralInference.unionCollectionTypes(System.Boolean,Microsoft.FSharp.Collections.FSharpMap{FSharp.Data.Runtime.StructuralTypes.InferedTypeTag,System.Tuple{FSharp.Data.Runtime.StructuralTypes.InferedMultiplicity,FSharp.Data.Runtime.StructuralTypes.InferedType}},Microsoft.FSharp.Collections.FSharpMap{FSharp.Data.Runtime.StructuralTypes.InferedTypeTag,System.Tuple{FSharp.Data.Runtime.StructuralTypes.InferedMultiplicity,FSharp.Data.Runtime.StructuralTypes.InferedType}})">
 <summary>
  A collection can contain multiple types - in that case, we do keep 
@@ -4630,6 +4652,9 @@
 <member name="">
 
 </member>
+<member name="">
+
+</member>
 <member name="T:ProviderImplementation.FreebaseRuntimeInfo">
 <summary>
  Find the handles in the Freebase type provider runtime DLL. 
@@ -4656,9 +4681,6 @@
 <summary>
  This is the Freebase type provider.    
 </summary>
-</member>
-<member name="">
-
 </member>
 <member name="">
 
@@ -4875,10 +4897,22 @@
 <member name="">
 
 </member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
 <member name="T:ProviderImplementation.XmlGenerationContext">
 <summary>
  Context that is used to generate the XML types.
 </summary>
+</member>
+<member name="">
+
 </member>
 <member name="">
 
@@ -5896,7 +5930,22 @@
 <member name="">
 
 </member>
-<member name="M:ProviderImplementation.ProviderHelpers.generateType``1(System.String,System.String,System.Boolean,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0}},Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,System.Collections.Generic.IEnumerable{``0}}},Microsoft.FSharp.Core.FSharpFunc{System.Collections.Generic.IEnumerable{``0},ProviderImplementation.ProviderHelpers.TypeProviderSpec},ProviderImplementation.AssemblyResolver.FSharpDataRuntimeVersion,ProviderImplementation.DisposableTypeProviderForNamespaces,Microsoft.FSharp.Core.CompilerServices.TypeProviderConfig,ProviderImplementation.AssemblyReplacer,System.String,System.String)">
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="M:ProviderImplementation.ProviderHelpers.generateType``1(System.String,System.String,System.Boolean,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0}},Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0[]}},Microsoft.FSharp.Core.FSharpFunc{``0[],ProviderImplementation.ProviderHelpers.TypeProviderSpec},ProviderImplementation.AssemblyResolver.FSharpDataRuntimeVersion,ProviderImplementation.DisposableTypeProviderForNamespaces,Microsoft.FSharp.Core.CompilerServices.TypeProviderConfig,ProviderImplementation.AssemblyReplacer,System.String,System.String,System.String)">
 <summary>
  Creates all the constructors for a type provider: (Async)Parse, (Async)Load, (Async)GetSample(s), and default constructor
  * sampleOrSampleUri - the text which can be a sample or an uri for a sample
@@ -5908,6 +5957,8 @@
  * cfg -&gt; the type provider config
  * replacer -&gt; the assemblyReplacer
  * resolutionFolder -&gt; if the type provider allows to override the resolutionFolder pass it here
+ * optResource - when specified, we first try to treat read the sample from an embedded resource
+     (the value specified assembly and resource name e.g. &quot;MyCompany.MyAssembly, some_resource.json&quot;)
  * typeName -&gt; the full name of the type provider, this will be used for caching
 </summary>
 </member>
@@ -5917,7 +5968,7 @@
 <member name="">
 
 </member>
-<member name="M:ProviderImplementation.ProviderHelpers.parseTextAtDesignTime``1(System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0}},System.String,FSharp.Data.Runtime.IO.IDisposableTypeProvider,Microsoft.FSharp.Core.CompilerServices.TypeProviderConfig,System.String,System.String)">
+<member name="M:ProviderImplementation.ProviderHelpers.parseTextAtDesignTime``1(System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,Microsoft.FSharp.Core.FSharpFunc{System.String,``0[]}},System.String,FSharp.Data.Runtime.IO.IDisposableTypeProvider,Microsoft.FSharp.Core.CompilerServices.TypeProviderConfig,System.String,System.String,System.String)">
 <summary>
  Reads a sample parameter for a type provider, detecting if it is a uri and fetching it if needed
  Samples from the web are cached for 30 minutes
@@ -5930,8 +5981,13 @@
  * formatName - the description of what is being parsed (for the error message)
  * tp - the type provider
  * cfg - the type provider config
+ * optResource - when specified, we first try to treat read the sample from an embedded resource
+     (the value specified assembly and resource name e.g. &quot;MyCompany.MyAssembly, some_resource.json&quot;)
  * resolutionFolder - if the type provider allows to override the resolutionFolder pass it here
 </summary>
+</member>
+<member name="">
+
 </member>
 <member name="">
 
@@ -6017,7 +6073,7 @@
 <summary>
  Succeeds when type is a heterogeneous type containing recors
  If the type is heterogeneous, but contains other things, exception
- is thrown (this is unexpected, because XML nodes are always records)
+ is thrown (this is unexpected, because XML elements are always records)
 </summary>
 </member>
 <member name="M:ProviderImplementation.XmlTypeBuilder.|ContentType|_|(FSharp.Data.Runtime.StructuralTypes.InferedProperty)">
