@@ -16,11 +16,11 @@
     <tags>@tags@</tags>
     <dependencies>
       <group targetFramework="portable-net40+sl5+wp8+win8">
-        <dependency id="FSharp.Data" version="2.0.7" />
+        <dependency id="FSharp.Data" version="2.0.9" />
         <dependency id="Zlib.Portable" version="1.9.2" />
       </group>
       <group targetFramework="net40">
-        <dependency id="FSharp.Data" version="2.0.7" />
+        <dependency id="FSharp.Data" version="2.0.9" />
       </group>
     </dependencies>
     <references>

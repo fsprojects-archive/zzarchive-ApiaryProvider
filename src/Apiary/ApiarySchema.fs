@@ -21,7 +21,8 @@ type RestApi<'T> =
   | Entity of string * list<'T> * list<RestApi<'T>>
 
 module ApiarySchema =
-  let download = 
+
+  let private download = 
     // Cache for storing downloaded specifications
     let cache, _ = createInternetFileCache "ApiarySchema" (TimeSpan.FromMinutes 30.0)
     fun uri ->

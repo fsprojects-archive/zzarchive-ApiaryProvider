@@ -75,7 +75,7 @@
       <HintPath>..\..\bin\ApiaryProvider.DesignTime.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.Data.DesignTime">
-      <HintPath>..\..\packages\FSharp.Data.2.0.6\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
+      <HintPath>..\..\packages\FSharp.Data.2.0.9\lib\net40\FSharp.Data.DesignTime.dll</HintPath>
     </Reference>
     <Reference Include="FSharp.Literate">
       <HintPath>..\..\packages\FSharp.Formatting.2.4.8\lib\net40\FSharp.Literate.dll</HintPath>
