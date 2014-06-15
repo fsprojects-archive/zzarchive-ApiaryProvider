@@ -1,0 +1,9 @@
+SRCSRV: ini ------------------------------------------------
+VERSION=2
+SRCSRV: variables ------------------------------------------
+SRCSRVVERCTRL=https
+SRCSRVTRG=https://raw.github.com/fsprojects/ApiaryProvider/6ad4d1fcbf533fe5c9e94000f09bfa1c6819464d/%var2%
+SRCSRV: source files ---------------------------------------
+C:\Git\ApiaryProvider SourceLink\src\Apiary\ApiaryRuntime.fs*src/Apiary/ApiaryRuntime.fs
+C:\Git\ApiaryProvider SourceLink\src\Runtime.fs*src/Runtime.fs
+SRCSRV: end ------------------------------------------------

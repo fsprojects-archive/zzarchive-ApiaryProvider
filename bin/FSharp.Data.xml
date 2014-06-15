@@ -8,6 +8,30 @@
 <member name="">
 
 </member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
 <member name="M:FSharp.Data.CsvFile.Parse(System.String,Microsoft.FSharp.Core.FSharpOption{System.String},Microsoft.FSharp.Core.FSharpOption{System.Char},Microsoft.FSharp.Core.FSharpOption{System.Boolean},Microsoft.FSharp.Core.FSharpOption{System.Boolean})">
 <summary>
  Parses the specified CSV content
@@ -227,6 +251,94 @@
  The response returned by an HTTP request with direct access to the response stream
 </summary>
 </member>
+<member name="M:FSharp.Data.JsonExtensions.TryGetProperty(FSharp.Data.JsonValue,System.String)">
+<summary>
+ Try to get a property of a JSON value.
+ Returns None if the value is not an object or if the property is not present.
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.Properties(FSharp.Data.JsonValue)">
+<summary>
+ Get a sequence of key-value pairs representing the properties of an object
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.Item(FSharp.Data.JsonValue,System.Int32)">
+<summary>
+ Try to get the value at the specified index, if the value is a JSON array.
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.Item(FSharp.Data.JsonValue,System.String)">
+<summary>
+ Assuming the value is an object, get value with the specified name
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.InnerText(FSharp.Data.JsonValue)">
+<summary>
+ Get inner text of an element
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.GetProperty(FSharp.Data.JsonValue,System.String)">
+<summary>
+ Get property of a JSON object. Fails if the value is not an object
+ or if the property is not present
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.GetEnumerator(FSharp.Data.JsonValue)">
+<summary>
+ Get all the elements of a JSON value (assuming that the value is an array)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsString(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get the string value of an element (assuming that the value is a scalar)
+ Returns the empty string for JsonValue.Null
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsInteger64(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get a number as a 64-bit integer (assuming that the value fits in 64-bit integer)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsInteger(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get a number as an integer (assuming that the value fits in integer)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsGuid(FSharp.Data.JsonValue)">
+<summary>
+ Get the guid value of an element (assuming that the value is a guid)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsFloat(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo},Microsoft.FSharp.Core.FSharpOption{System.String[]})">
+<summary>
+ Get a number as a float (assuming that the value is convertible to a float)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsDecimal(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get a number as a decimal (assuming that the value fits in decimal)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsDateTime(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get the datetime value of an element (assuming that the value is a string
+ containing well-formed ISO date or MSFT JSON date)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsBoolean(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
+<summary>
+ Get the boolean value of an element (assuming that the value is a boolean)
+</summary>
+</member>
+<member name="M:FSharp.Data.JsonExtensions.AsArray(FSharp.Data.JsonValue)">
+<summary>
+ Get all the elements of a JSON value.
+ Returns an empty array if the value is not a JSON array.
+</summary>
+</member>
+<member name="">
+
+</member>
 <member name="">
 
 </member>
@@ -345,6 +457,9 @@
  Loads JSON from the specified stream
 </summary>
 </member>
+<member name="">
+
+</member>
 <member name="M:FSharp.Data.JsonValue.AsyncLoad(System.String,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
 <summary>
  Loads JSON from the specified uri asynchronously
@@ -352,42 +467,18 @@
 </member>
 <member name="T:FSharp.Data.JsonValue">
 <summary>
- Represents a JSON value. Large numbers that do not fit in the 
+ Represents a JSON value. Large numbers that do not fit in the
  Decimal type are represented using the Float case, while
  smaller numbers are represented as decimals to avoid precision loss.
 </summary>
 </member>
-<member name="M:FSharp.Data.CsvExtensions.op_Dynamic(FSharp.Data.CsvRow,System.String)">
+<member name="M:FSharp.Data.CsvExtensionsModule.op_Dynamic(FSharp.Data.CsvRow,System.String)">
 <summary>
  Get column of a CsvRow
 </summary>
 </member>
-<member name="">
+<member name="T:FSharp.Data.CsvExtensionsModule">
 
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:FSharp.Data.CsvExtensions">
-<summary>
- Unsafe extension methods that can be used to work with CsvRow in a less safe, but shorter way.
- This module also provides the dynamic operator.
-</summary>
 </member>
 <member name="M:FSharp.Data.FreebaseOperators.Where``1(System.Linq.IQueryable{``0},System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
 <summary>
@@ -542,6 +633,18 @@
 <summary>
  Constants for common HTTP content types
 </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:FSharp.Data.HttpEncodings">
+
 </member>
 <member name="P:FSharp.Data.HttpMethod.Connect">
 <summary>
@@ -983,101 +1086,16 @@
  Header received in an HTTP response
 </summary>
 </member>
-<member name="M:FSharp.Data.JsonExtensions.op_Dynamic(FSharp.Data.JsonValue,System.String)">
+<member name="">
+
+</member>
+<member name="M:FSharp.Data.JsonExtensionsModule.op_Dynamic(FSharp.Data.JsonValue,System.String)">
 <summary>
  Get property of a JSON object (assuming that the value is an object)
 </summary>
 </member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.get_InnerText(FSharp.Data.JsonValue)">
-<summary>
- Get inner text of an element
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsGuid(FSharp.Data.JsonValue)">
-<summary>
- Get the guid value of an element (assuming that the value is a guid)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsDateTime(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get the datetime value of an element (assuming that the value is a string
- containing well-formed ISO date or MSFT JSON date)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsBoolean(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get the boolean value of an element (assuming that the value is a boolean)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsFloat(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo},Microsoft.FSharp.Core.FSharpOption{System.String[]})">
-<summary>
- Get a number as a float (assuming that the value is convertible to a float)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsDecimal(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get a number as a decimal (assuming that the value fits in decimal)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsInteger64(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get a number as a 64-bit integer (assuming that the value fits in 64-bit integer)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsInteger(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get a number as an integer (assuming that the value fits in integer)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsString(FSharp.Data.JsonValue,Microsoft.FSharp.Core.FSharpOption{System.Globalization.CultureInfo})">
-<summary>
- Get the string value of an element (assuming that the value is a scalar)
- Returns the empty string for JsonValue.Null
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.get_Item(FSharp.Data.JsonValue,System.Int32)">
-<summary>
- Assuming the value is an array, get the value at a specified index
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.GetEnumerator(FSharp.Data.JsonValue)">
-<summary>
- Get all the elements of a JSON value (assuming that the value is an array)
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.AsArray(FSharp.Data.JsonValue)">
-<summary>
- Get all the elements of a JSON value.
- Returns an empty array if the value is not a JSON array.
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.get_Item(FSharp.Data.JsonValue,System.String)">
-<summary>
- Assuming the value is an object, get value with the specified name
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.TryGetProperty(FSharp.Data.JsonValue,System.String)">
-<summary>
- Try to get a property of a JSON value.
- Returns None if the value is not an object or if the property is not present.
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.GetProperty(FSharp.Data.JsonValue,System.String)">
-<summary>
- Get property of a JSON object. Fails if the value is not an object
- or if the property is not present
-</summary>
-</member>
-<member name="M:FSharp.Data.JsonExtensions.JsonValue.get_Properties(FSharp.Data.JsonValue)">
-<summary>
- Get a sequence of key-value pairs representing the properties of an object
-</summary>
-</member>
-<member name="T:FSharp.Data.JsonExtensions">
-<summary>
- Extension methods that can be used to work with JsonValue in a less safe, but more convenient way.
- This module also provides the dynamic operator.
-</summary>
+<member name="T:FSharp.Data.JsonExtensionsModule">
+
 </member>
 <member name="P:FSharp.Data.JsonValueModule.Object">
 <summary>
@@ -1203,7 +1221,7 @@
 <member name="">
 
 </member>
-<member name="M:FSharp.Data.Runtime.CsvFile`1.CreateNonReentrant(System.Func{System.Object,System.String[],`0},System.Func{`0,System.String[]},System.IO.TextReader,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean)">
+<member name="M:FSharp.Data.Runtime.CsvFile`1.Create(System.Func{System.Object,System.String[],`0},System.Func{`0,System.String[]},System.IO.TextReader,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean)">
 <summary>
  [omit]
 </summary>
@@ -1443,30 +1461,6 @@
 <member name="T:FSharp.Data.Runtime.JsonValueOptionAndPath">
 <summary>
  [omit]
-</summary>
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="">
-
-</member>
-<member name="T:FSharp.Data.Runtime.ReentrantEnumerable`1">
-<summary>
- An enumerable that will return elements from the &apos;firstSeq&apos; first time it
- is accessed and then will call &apos;nextSeq&apos; each time for all future GetEnumerator calls
 </summary>
 </member>
 <member name="">
@@ -1716,6 +1710,57 @@
 <summary>
  Implements caching using in-memory and local file system 
 </summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="T:FSharp.Data.Runtime.CsvHelpers.ReentrantEnumerable`1">
+<summary>
+ An enumerable that will return elements from the &apos;firstSeq&apos; first time it
+ is accessed and then will call &apos;nextSeq&apos; each time for all future GetEnumerator calls
+</summary>
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
+</member>
+<member name="">
+
 </member>
 <member name="">
 
@@ -3165,12 +3210,6 @@
 <member name="">
 
 </member>
-<member name="T:FSharp.Data.Runtime.HttpUtils">
-
-</member>
-<member name="">
-
-</member>
 <member name="">
 
 </member>
@@ -3252,12 +3291,12 @@
 <member name="">
 
 </member>
-<member name="M:FSharp.Data.Runtime.IO.asyncReadTextAtRuntimeWithDesignTimeRules(System.String,System.String,System.String,System.String)">
+<member name="M:FSharp.Data.Runtime.IO.asyncReadTextAtRuntimeWithDesignTimeRules(System.String,System.String,System.String,System.String,System.String)">
 <summary>
  Returns a TextReader for the uri using the designtime resolution rules
 </summary>
 </member>
-<member name="M:FSharp.Data.Runtime.IO.asyncReadTextAtRuntime(System.Boolean,System.String,System.String,System.String,System.String)">
+<member name="M:FSharp.Data.Runtime.IO.asyncReadTextAtRuntime(System.Boolean,System.String,System.String,System.String,System.String,System.String)">
 <summary>
  Returns a TextReader for the uri using the runtime resolution rules
 </summary>
@@ -3265,7 +3304,7 @@
 <member name="">
 
 </member>
-<member name="M:FSharp.Data.Runtime.IO.asyncOpenStream(Microsoft.FSharp.Core.FSharpOption{System.Tuple{FSharp.Data.Runtime.IO.IDisposableTypeProvider,System.String}},FSharp.Data.Runtime.IO.UriResolver,System.String,System.Uri)">
+<member name="M:FSharp.Data.Runtime.IO.asyncReadText(Microsoft.FSharp.Core.FSharpOption{System.Tuple{FSharp.Data.Runtime.IO.IDisposableTypeProvider,System.String}},FSharp.Data.Runtime.IO.UriResolver,System.String,System.String,System.Uri)">
 <summary>
  Opens a stream to the uri using the uriResolver resolution rules
  It the uri is a file, uses shared read, so it works when the file locked by Excel or similar tools,
