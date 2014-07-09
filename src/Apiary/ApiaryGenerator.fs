@@ -57,7 +57,8 @@ module internal ApiaryTypeBuilder =
             match example.TryGetProperty "body" with
             | Some body -> 
                 let source = body.InnerText()
-                yield JsonValue.ParseSample(source)
+                if String.IsNullOrEmpty source then ()
+                else yield JsonValue.ParseSample source
             | None -> () ]
 
     let result =
