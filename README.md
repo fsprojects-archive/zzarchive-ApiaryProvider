@@ -50,3 +50,9 @@ The library is available under Apache 2.0. For more information see the [License
  [2]: https://github.com/fsprojects/ApiaryProvider/tree/master/docs/content
  [3]: http://fsprojects.github.io/ApiaryProvider/
 
+
+## Maintainer(s)
+
+- [@ovatsus](https://github.com/ovatsus)
+
+The default maintainer account for projects under "fsprojects" is [@fsgit](https://github.com/fsgit) - F# Community Project Incubation Space (repo management)
