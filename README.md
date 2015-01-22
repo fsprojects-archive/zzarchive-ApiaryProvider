@@ -1,6 +1,9 @@
+[![Issue Stats](http://issuestats.com/github/fsprojects/ApiaryProvider/badge/issue)](http://issuestats.com/github/fsprojects/ApiaryProvider)
+[![Issue Stats](http://issuestats.com/github/fsprojects/ApiaryProvider/badge/pr)](http://issuestats.com/github/fsprojects/ApiaryProvider)
+
 # ApiaryProvider
 
-A type provider for Apiary.io
+A type provider for Apiary.io [![NuGet Status](http://img.shields.io/nuget/v/ApiaryProvider.svg?style=flat)](https://www.nuget.org/packages/ApiaryProvider/)
 
 You can see the version history [here](RELEASE_NOTES.md).
 
